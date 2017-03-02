@@ -7,3 +7,5 @@ D:\programy\polibudastuff\projekty visual\2\Politechnikon\Politechnikon\bin\Debu
 D:\programy\polibudastuff\projekty visual\2\Politechnikon\Politechnikon\obj\Debug\Politechnikon.csprojResolveAssemblyReference.cache
 D:\programy\polibudastuff\projekty visual\2\Politechnikon\Politechnikon\obj\Debug\Politechnikon.exe
 D:\programy\polibudastuff\projekty visual\2\Politechnikon\Politechnikon\obj\Debug\Politechnikon.pdb
+D:\programy\polibudastuff\projekty visual\2\Politechnikon\Politechnikon\obj\Debug\Politechnikon.Properties.Resources.resources
+D:\programy\polibudastuff\projekty visual\2\Politechnikon\Politechnikon\obj\Debug\Politechnikon.csproj.GenerateResource.Cache
