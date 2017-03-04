@@ -1,1 +1,0 @@
-Gra komputerowa desktopowa Politechnikon
