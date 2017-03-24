@@ -17,6 +17,7 @@ namespace Politechnikon.engine
         private static Logging LogCreator;
         public static Texture2D LoadTexture(string path)
         {
+            LogCreator = new Logging();
 
             try{
                 int id = GL.GenTexture();
@@ -39,6 +40,7 @@ namespace Politechnikon.engine
                 return new Texture2D(id,bmp.Width,bmp.Height);
 
             }catch(Exception ex){
+                LogCreator.GenerateLog(ex);
                 return new Texture2D(0, 0, 0);
             };
             
