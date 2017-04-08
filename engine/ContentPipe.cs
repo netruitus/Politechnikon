@@ -14,10 +14,10 @@ namespace Politechnikon.engine
 {
     public class ContentPipe
     {
-        private static Logging LogCreator;
+        private static LogHandler LogCreator;
         public static Texture2D LoadTexture(string path)
         {
-            LogCreator = new Logging();
+            LogCreator = new LogHandler();
 
             try{
                 int id = GL.GenTexture();
