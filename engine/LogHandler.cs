@@ -7,10 +7,10 @@ using System.IO;
 
 namespace Politechnikon.engine
 {
-    public class Logging
+    public class LogHandler
     {
         private Boolean DoLogging;
-        public Logging() { DoLogging = true; }
+        public LogHandler() { DoLogging = true; }
         //klasa odpowiedzialna za generowanie logów
         public void GenerateLog(Exception e)
         {
