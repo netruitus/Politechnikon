@@ -36,6 +36,14 @@ namespace Politechnikon.engine
             }
         }
 
+        public Vector2 PositionGoto
+        {
+            get
+            {
+                return this.positionGoto;
+            }
+        }
+
         public Vector2 ToWorld(Vector2 input)
         {
             input /= (float)zoom;

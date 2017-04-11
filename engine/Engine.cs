@@ -28,18 +28,10 @@ namespace Politechnikon.engine
 
             view = new View(Vector2.Zero, 1.0, 0.0);
 
-            Mouse.ButtonDown += Mouse_ButtonDown;
-            
+            Input.Initialize(this);
         }
 
-        void Mouse_ButtonDown(object sender, OpenTK.Input.MouseButtonEventArgs e)
-        {
-            Vector2 pos = new Vector2(e.Position.X, e.Position.Y);
-            pos -= new Vector2(this.Width, this.Height) /2f;
-            pos = view.ToWorld(pos);
 
-            view.SetPosition(pos, TweenType.QuadraticInOut, 60);
-        }
         
         private void initDisplay()
         {
@@ -62,8 +54,33 @@ namespace Politechnikon.engine
         {
             base.OnUpdateFrame(e);
 
+            if (Input.MousePress(OpenTK.Input.MouseButton.Left))
+            {
+                Vector2 pos = new Vector2(Mouse.X, Mouse.Y) - new Vector2(this.Width,this.Height) / 2f;
+                pos = view.ToWorld(pos);
+
+                view.SetPosition(pos, TweenType.QuarticOut, 15);
+            }
+
+            if (Input.KeyDown(OpenTK.Input.Key.Right))
+            {
+                view.SetPosition(view.PositionGoto + new Vector2(5, 0), TweenType.QuarticOut, 15);
+            }
+            if (Input.KeyDown(OpenTK.Input.Key.Left))
+            {
+                view.SetPosition(view.PositionGoto + new Vector2(-5, 0), TweenType.QuarticOut, 15);
+            }
+            if (Input.KeyDown(OpenTK.Input.Key.Up))
+            {
+                view.SetPosition(view.PositionGoto + new Vector2(0, -5), TweenType.QuarticOut, 15);
+            }
+            if (Input.KeyDown(OpenTK.Input.Key.Down))
+            {
+                view.SetPosition(view.PositionGoto + new Vector2(0, 5), TweenType.QuarticOut, 15);
+            }
 
             view.Update();
+            Input.Update();
         }
 
         protected override void OnRenderFrame(FrameEventArgs e)
