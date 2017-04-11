@@ -55,6 +55,7 @@ namespace Politechnikon.engine
         {
             if (currentStep < tweenSteps)
             {
+                currentStep++;
                 switch (tweenType)
                 {
                     case TweenType.Linear:
@@ -70,8 +71,6 @@ namespace Politechnikon.engine
                         position = positionFrom + (positionGoto - positionFrom) * GetQuarticOut((float)currentStep / tweenSteps);
                         break;
                 }
-
-                currentStep++;
             }
             else
             {
@@ -98,6 +97,24 @@ namespace Politechnikon.engine
             currentStep = 0;
             tweenSteps = numSteps;
         }
+
+        public float GetLinear(float t)
+        {
+            return t;
+        }
+        public float GetQuadraticInOut(float t)
+        {
+            return (t*t) / ((2 * t * t) - (2 * t) + 1);
+        }
+        public float GetCubicInOut(float t)
+        {
+            return (t * t * t) / ((3 * t * t) - (3 * t) + 1);
+        }
+        public float GetQuarticOut(float t)
+        {
+            return -((t-1)*(t-1)*(t-1)*(t-1)) + 1;
+        }
+
 
         public void ApplyTransform(){
             Matrix4 transform = Matrix4.Identity;

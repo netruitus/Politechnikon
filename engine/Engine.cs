@@ -29,6 +29,7 @@ namespace Politechnikon.engine
             view = new View(Vector2.Zero, 1.0, 0.0);
 
             Mouse.ButtonDown += Mouse_ButtonDown;
+            
         }
 
         void Mouse_ButtonDown(object sender, OpenTK.Input.MouseButtonEventArgs e)
@@ -36,7 +37,8 @@ namespace Politechnikon.engine
             Vector2 pos = new Vector2(e.Position.X, e.Position.Y);
             pos -= new Vector2(this.Width, this.Height) /2f;
             pos = view.ToWorld(pos);
-            view.position = pos;
+
+            view.SetPosition(pos, TweenType.QuadraticInOut, 60);
         }
         
         private void initDisplay()
@@ -60,8 +62,6 @@ namespace Politechnikon.engine
         {
             base.OnUpdateFrame(e);
 
-            view.position.Y -= 0.01f;
-            view.position.X -= 0.01f;
 
             view.Update();
         }
