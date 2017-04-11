@@ -27,6 +27,16 @@ namespace Politechnikon.engine
             GL.Enable(EnableCap.Texture2D);
 
             view = new View(Vector2.Zero, 1.0, 0.0);
+
+            Mouse.ButtonDown += Mouse_ButtonDown;
+        }
+
+        void Mouse_ButtonDown(object sender, OpenTK.Input.MouseButtonEventArgs e)
+        {
+            Vector2 pos = new Vector2(e.Position.X, e.Position.Y);
+            pos -= new Vector2(this.Width, this.Height) /2f;
+            pos = view.ToWorld(pos);
+            view.position = pos;
         }
         
         private void initDisplay()
@@ -66,7 +76,7 @@ namespace Politechnikon.engine
             Sprite.Begin(this.Width,this.Height);
             view.ApplyTransform();
 
-            Sprite.Draw(texture,Vector2.Zero, new Vector2(2f,2f),Color.Green, new Vector2(10,50));
+            Sprite.Draw(texture,Vector2.Zero, new Vector2(2f,2f),Color.Green, new Vector2(0,0));
             Sprite.Draw(texture, Vector2.Zero, new Vector2(2f, 2f), Color.Red, new Vector2(100, 50));
             Sprite.Draw(texture, Vector2.Zero, new Vector2(2f, 2f), Color.Yellow, new Vector2(100, 100));
             Sprite.Draw(texture, Vector2.Zero, new Vector2(2f, 2f), Color.Blue, new Vector2(10, 100));
