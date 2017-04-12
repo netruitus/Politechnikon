@@ -5,10 +5,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Politechnikon.game
+namespace Politechnikon.game_logic
 {
-    public class Logic
+    public class Mechanic
     {
+        public Mechanic()
+        {
+
+        }
+
+        public void LoadObjects()
+        {
+
+        }
+
+        public void GetInput()
+        {
+
+        }
+
+
 
 
         public void render(FrameEventArgs e)
@@ -21,9 +37,6 @@ namespace Politechnikon.game
 
         }
 
-        public void getInput()
-        {
 
-        }
     }
 }
