@@ -8,12 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Imaging;
 using OpenTK.Graphics;
+using Politechnikon.game_elements;
 
 namespace Politechnikon.engine
 {
     public class Engine : GameWindow
     {
-        Texture2D texture;
+        public static int GRIDSIZE = 64, TILESIZE = 64;
+
+        Texture2D texture, tileset;
+        Level level;
         View view;
 
 
@@ -48,6 +52,8 @@ namespace Politechnikon.engine
             //tutaj ładujemy obiekty
             base.OnLoad(e);
             texture = ContentPipe.LoadTexture("graphics\\misc\\Icon.png");
+            tileset = ContentPipe.LoadTexture("graphics\\misc\\Icon.png");
+            level = new Level(20, 20);
         }
 
         protected override void OnUpdateFrame(FrameEventArgs e)
@@ -59,7 +65,7 @@ namespace Politechnikon.engine
                 Vector2 pos = new Vector2(Mouse.X, Mouse.Y) - new Vector2(this.Width,this.Height) / 2f;
                 pos = view.ToWorld(pos);
 
-                view.SetPosition(pos, TweenType.QuarticOut, 15);
+                view.SetPosition(pos, TweenType.QuarticOut, 60);
             }
 
             if (Input.KeyDown(OpenTK.Input.Key.Right))
@@ -88,15 +94,26 @@ namespace Politechnikon.engine
             base.OnRenderFrame(e);
 
             GL.Clear(ClearBufferMask.ColorBufferBit);
-            GL.ClearColor(Color.CornflowerBlue);
+            GL.ClearColor(Color.Black);
 
             Sprite.Begin(this.Width,this.Height);
             view.ApplyTransform();
 
-            Sprite.Draw(texture,Vector2.Zero, new Vector2(2f,2f),Color.Green, new Vector2(0,0));
-            Sprite.Draw(texture, Vector2.Zero, new Vector2(2f, 2f), Color.Red, new Vector2(100, 50));
-            Sprite.Draw(texture, Vector2.Zero, new Vector2(2f, 2f), Color.Yellow, new Vector2(100, 100));
-            Sprite.Draw(texture, Vector2.Zero, new Vector2(2f, 2f), Color.Blue, new Vector2(10, 100));
+            for (int x = 0; x < level.Width; x++)
+            {
+                for (int y = 0; y < level.Height; y++)
+                {
+                    RectangleF source = new RectangleF(0,0,0,0);
+
+                    switch (level[x, y].Type)
+                    {
+                        case BlockType.Solid:
+                            source = new RectangleF(0,0,64,64);
+                            break;
+                    }
+                    Sprite.Draw(tileset, new Vector2(x * GRIDSIZE, y * GRIDSIZE), new Vector2((float)GRIDSIZE/TILESIZE), Color.White, Vector2.Zero, source);
+                }
+            }
 
             this.SwapBuffers();
         }
