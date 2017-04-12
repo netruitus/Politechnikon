@@ -1,7 +1,7 @@
 using System;
 using System.Security.Cryptography;
 
-namespace Politechnikon.game
+namespace Politechnikon.game_logic
 {
     class Arena
     {
