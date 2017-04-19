@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Politechnikon.engine
+namespace Politechnikon.game_elements
 {
-    class Object
+    class ObjectAbstrakt
     {
     }
 }

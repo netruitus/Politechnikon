@@ -13,7 +13,7 @@ using Politechnikon.game_logic;
 
 namespace Politechnikon.engine
 {
-    struct InitializedObject
+    public struct InitializedObjectTexture
     {
         private Texture2D texture;
         private Vector2 position;
@@ -22,7 +22,7 @@ namespace Politechnikon.engine
         private Color color;
         private string texturePath;
 
-        public InitializedObject(int x, int y, int width, int height, string texturePath, Color color)
+        public InitializedObjectTexture(int x, int y, int width, int height, string texturePath, Color color)
         {
             this.position.X = x;
             this.position.Y = y;
@@ -124,10 +124,11 @@ namespace Politechnikon.engine
         public static int GRIDSIZE = 64, TILESIZE = 64;
 
         Mechanic GameMechanic;
-        List<InitializedObject> ObjectList;
-        Texture2D texture, tileset;
+        List<InitializedObjectTexture> ObjectTextureList;
+        Texture2D tileset;
         Level level;
         View view;
+        float sc = 1;
 
 
         private static Bitmap Icon;
@@ -139,33 +140,37 @@ namespace Politechnikon.engine
             GL.Enable(EnableCap.Texture2D);
             view = new View(Vector2.Zero, 1.0, 0.0);
             Input.Initialize(this);
-            ObjectList = new List<InitializedObject>();
-            GameMechanic = new Mechanic();
+            ObjectTextureList = new List<InitializedObjectTexture>();
+            GameMechanic = new Mechanic(ObjectTextureList);
+            
         }
 
-
-        
+  
         private void initDisplay()
         {
+            //inicjalizacja ikonki
             Icon = (Bitmap)Image.FromFile(@"resources\\graphics\\misc\\Icon.png");
             Icon.SetResolution(64, 64);
             base.Icon = System.Drawing.Icon.FromHandle(Icon.GetHicon());
+            //ustawienie vsynca na adaptywny (średnio w granicach limit do 60 fps)
             base.VSync = VSyncMode.Adaptive;
+            //Zablokowanie okna gry
+            WindowBorder = WindowBorder.Fixed;    
         }
 
-
+        protected override void OnResize(EventArgs e)
+        {
+            base.OnResize(e);
+        }
 
         protected override void OnLoad(EventArgs e)
         {
             //tutaj ładujemy obiekty
             base.OnLoad(e);
-            GameMechanic.LoadObjects();
-
             view.SetPosition(new Vector2(0 + this.Width / 2, 0 + this.Height / 2));
-            InitializedObject TempObject = new InitializedObject(500, 0, 300, 500, "GUI\\ekran_startowy.png", Color.White);
-            ObjectList.Add(TempObject);
 
-            texture = ContentPipe.LoadTexture("graphics\\misc\\Icon.png");
+            GameMechanic.InitObjects();
+
             tileset = ContentPipe.LoadTexture("graphics\\misc\\Icon.png");
             level = new Level(20, 20);
         }
@@ -180,6 +185,19 @@ namespace Politechnikon.engine
                 pos = view.ToWorld(pos);
 
                 view.SetPosition(pos, TweenType.QuarticOut, 60);
+                Console.WriteLine(Mouse.X + " " + Mouse.Y);
+                if (Mouse.X > 700 && Mouse.X < 800)
+                {
+                    Console.WriteLine("aktywacja");
+                }
+            }
+            if (Input.KeyPress(OpenTK.Input.Key.Q))
+            {
+                sc += 0.1f;
+            }
+            if (Input.KeyPress(OpenTK.Input.Key.W))
+            {
+                if (sc-0.1f > 0)sc -= 0.1f;
             }
             view.Update();
             Input.Update();
@@ -188,20 +206,18 @@ namespace Politechnikon.engine
         protected override void OnRenderFrame(FrameEventArgs e)
         {
             base.OnRenderFrame(e);
-
             GL.Clear(ClearBufferMask.ColorBufferBit);
             GL.ClearColor(Color.Black);
-            Sprite.Begin(this.Width,this.Height);
+            Sprite.Begin((int)(this.Width / sc), (int)(this.Height / sc));
             view.ApplyTransform();
 
-            for (int i = 0; i < ObjectList.Count; i++)
+            for (int i = 0; i < ObjectTextureList.Count; i++)
             {
-                RectangleF TextureRect = new RectangleF(0, 0, ObjectList[i].Width, ObjectList[i].Height);
-                Sprite.Draw(ObjectList[i].Texture, ObjectList[i].Position, new Vector2(1,1), ObjectList[i].Color, Vector2.Zero, TextureRect);
+                RectangleF TextureRect = new RectangleF(0, 0, ObjectTextureList[i].Width, ObjectTextureList[i].Height);
+                Sprite.Draw(ObjectTextureList[i].Texture, ObjectTextureList[i].Position, new Vector2(1,1), ObjectTextureList[i].Color, Vector2.Zero, TextureRect);
             }
 
-
-
+            
             for (int x = 0; x < level.Width; x++)
             {
                 for (int y = 0; y < level.Height; y++)
@@ -217,7 +233,7 @@ namespace Politechnikon.engine
                     Sprite.Draw(tileset, new Vector2(x * GRIDSIZE, y * GRIDSIZE), new Vector2((float)GRIDSIZE/TILESIZE), Color.White, Vector2.Zero, source);
                 }
             }
-
+            
 
             this.SwapBuffers();
         }
