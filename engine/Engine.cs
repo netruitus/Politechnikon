@@ -1,5 +1,6 @@
 ﻿using OpenTK;
 using OpenTK.Graphics.OpenGL;
+using OpenTK.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -7,12 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Imaging;
-using OpenTK.Graphics;
 using Politechnikon.game_elements;
 using Politechnikon.game_logic;
 
 namespace Politechnikon.engine
 {
+    //struktura, która opisuje element listy tektur gotowych do wyrenderowania
     public struct InitializedObjectTexture
     {
         private Texture2D texture;
@@ -121,14 +122,12 @@ namespace Politechnikon.engine
     }
     public class Engine : GameWindow
     {
-        public static int GRIDSIZE = 64, TILESIZE = 64;
-
-        Mechanic GameMechanic;
-        List<InitializedObjectTexture> ObjectTextureList;
-        Texture2D tileset;
-        Level level;
-        View view;
-        float sc = 1;
+        private Mechanic GameMechanic;
+        private List<InitializedObjectTexture> ObjectTextureList;
+        private Texture2D tileset;
+        private Level level;
+        private View view;
+        private float sc = 1;
 
 
         private static Bitmap Icon;
@@ -141,8 +140,7 @@ namespace Politechnikon.engine
             view = new View(Vector2.Zero, 1.0, 0.0);
             Input.Initialize(this);
             ObjectTextureList = new List<InitializedObjectTexture>();
-            GameMechanic = new Mechanic(ObjectTextureList);
-            
+            GameMechanic = new Mechanic(ObjectTextureList,this);
         }
 
   
@@ -165,46 +163,29 @@ namespace Politechnikon.engine
 
         protected override void OnLoad(EventArgs e)
         {
-            //tutaj ładujemy obiekty
+            //ładowanie obiektów oraz ustawienie pierwotnych ustawień
             base.OnLoad(e);
             view.SetPosition(new Vector2(0 + this.Width / 2, 0 + this.Height / 2));
 
             GameMechanic.InitObjects();
 
-            tileset = ContentPipe.LoadTexture("graphics\\misc\\Icon.png");
-            level = new Level(20, 20);
         }
 
         protected override void OnUpdateFrame(FrameEventArgs e)
         {
+            //aktualizacja widoku, inputów oraz obiektów, jeśli takowe są zainicjowane
             base.OnUpdateFrame(e);
-            GameMechanic.GetInput();
-            if (Input.MousePress(OpenTK.Input.MouseButton.Left))
-            {
-                Vector2 pos = new Vector2(Mouse.X, Mouse.Y) - new Vector2(this.Width,this.Height) / 2f;
-                pos = view.ToWorld(pos);
 
-                view.SetPosition(pos, TweenType.QuarticOut, 60);
-                Console.WriteLine(Mouse.X + " " + Mouse.Y);
-                if (Mouse.X > 700 && Mouse.X < 800)
-                {
-                    Console.WriteLine("aktywacja");
-                }
-            }
-            if (Input.KeyPress(OpenTK.Input.Key.Q))
-            {
-                sc += 0.1f;
-            }
-            if (Input.KeyPress(OpenTK.Input.Key.W))
-            {
-                if (sc-0.1f > 0)sc -= 0.1f;
-            }
+            GameMechanic.GetInput();
+            GameMechanic.update();
+
             view.Update();
             Input.Update();
         }
 
         protected override void OnRenderFrame(FrameEventArgs e)
         {
+            //renderowanie tekstur układanych na stosie listy
             base.OnRenderFrame(e);
             GL.Clear(ClearBufferMask.ColorBufferBit);
             GL.ClearColor(Color.Black);
@@ -215,26 +196,8 @@ namespace Politechnikon.engine
             {
                 RectangleF TextureRect = new RectangleF(0, 0, ObjectTextureList[i].Width, ObjectTextureList[i].Height);
                 Sprite.Draw(ObjectTextureList[i].Texture, ObjectTextureList[i].Position, new Vector2(1,1), ObjectTextureList[i].Color, Vector2.Zero, TextureRect);
-            }
-
+            }     
             
-            for (int x = 0; x < level.Width; x++)
-            {
-                for (int y = 0; y < level.Height; y++)
-                {
-                    RectangleF source = new RectangleF(0,0,0,0);
-
-                    switch (level[x, y].Type)
-                    {
-                        case BlockType.Solid:
-                            source = new RectangleF(0,0,64,64);
-                            break;
-                    }
-                    Sprite.Draw(tileset, new Vector2(x * GRIDSIZE, y * GRIDSIZE), new Vector2((float)GRIDSIZE/TILESIZE), Color.White, Vector2.Zero, source);
-                }
-            }
-            
-
             this.SwapBuffers();
         }
     }
