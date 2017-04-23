@@ -25,24 +25,24 @@ namespace Politechnikon.game_logic
     }
     public class Mechanic
     {
-        private List<InitializedObjectTexture> ObjectList;
-        private List<InitializedObjectTexture> TemporaryObjectList;
+        private List<InitializedObjectTexture> ObjectsToRender;
+        private List<InitializedObjectTexture> ObjectsLoaded;
         private GameState gameState = GameState.InMenu;
         private OpenTK.Input.MouseDevice Mouse;
         private Engine engine;
 
         public Mechanic(List<InitializedObjectTexture> objectList,Engine eng)
         {
-            this.ObjectList = objectList;        
+            ObjectsLoaded = new List<InitializedObjectTexture>();
+            this.ObjectsToRender = objectList;        
             this.engine = eng;
-            this.Mouse = engine.Mouse;
+            this.Mouse = engine.Mouse;          
         }
 
         public void InitObjects()
         {
-            //inicjalizacja obiektów - ładowanie poszczególnych tekstur wyświetlanych do listy obiektów do wyrenderowania przez silnik
-            InitializedObjectTexture Menu = new InitializedObjectTexture(500, 0, 300, 500, "GUI\\ekran_startowy.png", Color.White);
-            ObjectList.Add(Menu);
+            //inicjalizacja obiektów i zmiennych
+
         }
 
         public void GetInput()
@@ -56,18 +56,38 @@ namespace Politechnikon.game_logic
                     if (Mouse.X > 700 && Mouse.X < 800)
                     {
                         Console.WriteLine("Koniec\n");
-                        engine.Exit();     
+                        //engine.Exit();     
                     }
                 }
                 
                  
             }
         }
-
+        private void LoadToRenderObjects()
+        {
+            for (int i = 0; i < ObjectsToRender.Count; i++)
+            {
+                ObjectsToRender.Remove(ObjectsToRender[i]);
+            }         
+            for (int i = 0; i < ObjectsLoaded.Count; i++)
+            {
+                ObjectsToRender.Add(ObjectsLoaded[i]);
+            }
+        }
 
         public void update()
         {
+            if (gameState == GameState.InMenu)
+            {
+                InitializedObjectTexture Menu = new InitializedObjectTexture(500, 0, 300, 500, "GUI\\ekran_startowy.png", Color.White);
+                ObjectsLoaded.Add(Menu);
+                LoadToRenderObjects();
+                gameState = GameState.Loaded;
+            }
+            else if (gameState == GameState.InSave)
+            {
 
+            }
         }
 
 
