@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<items>
+	<item id="1">
+		<name>klucz</name>
+		<path>0</path>
+		<description>key</description>
+		<value>0</value>
+		<power>0</power>
+		<slot>0</slot>
+	</item>
+	<item id="101">
+		<name>zapomniane rolety z 304h</name>
+		<path>0</path>
+		<description>normal</description>
+		<value>20</value>
+		<power>20</power>
+		<slot>1</slot>
+	</item>
+	<item id="102">
+		<name>skrzynia indeksów</name>
+		<path>0</path>
+		<description>normal</description>
+		<value>40</value>
+		<power>40</power>
+		<slot>1</slot>
+	</item>
+	<item id="103">
+		<name>zepsute ławki</name>
+		<path>0</path>
+		<description>normal</description>
+		<value>60</value>
+		<power>60</power>
+		<slot>1</slot>
+	</item>
+	<item id="104">
+		<name>płytka niktniewiepoco2-115</name>
+		<path>0</path>
+		<description>normal</description>
+		<value>80</value>
+		<power>80</power>
+		<slot>1</slot>
+	</item>
+	<item id="105">
+		<name>automat nie oddający reszty</name>
+		<path>0</path>
+		<description>normal</description>
+		<value>100</value>
+		<power>100</power>
+		<slot>1</slot>
+	</item>
+	<item id="201">
+		<name>ołówek antymatematyczny</name>
+		<path>0</path>
+		<description>weapon</description>
+		<value>125</value>
+		<power>125</power>
+		<slot>2</slot>
+	</item>
+	<item id="202">
+		<name>zawirusowany pendrive</name>
+		<path>0</path>
+		<description>weapon</description>
+		<value>150</value>
+		<power>150</power>
+		<slot>2</slot>
+	</item>
+	<item id="203">
+		<name>kabel-dusiciel</name>
+		<path>0</path>
+		<description>weapon</description>
+		<value>175</value>
+		<power>175</power>
+		<slot>2</slot>
+	</item>
+	<item id="204">
+		<name>płomienny zasilacz</name>
+		<path>0</path>
+		<description>weapon</description>
+		<value>200</value>
+		<power>200</power>
+		<slot>2</slot>
+	</item>
+	<item id="205">
+		<name>marker-pogromca tablic</name>
+		<path>0</path>
+		<description>weapon</description>
+		<value>250</value>
+		<power>250</power>
+		<slot>2</slot>
+	</item>
+	<item id="206">
+		<name>greda</name>
+		<path>0</path>
+		<description>weapon</description>
+		<value>300</value>
+		<power>300</power>
+		<slot>2</slot>
+	</item>
+	<item id="301">
+		<name>notatki z wykładów</name>
+		<path>0</path>
+		<description>armor</description>
+		<value>125</value>
+		<power>125</power>
+		<slot>3</slot>
+	</item>
+	<item id="302">
+		<name>lista obecności</name>
+		<path>0</path>
+		<description>armor</description>
+		<value>150</value>
+		<power>150</power>
+		<slot>3</slot>
+	</item>
+	<item id="303">
+		<name>nieprana koszulka</name>
+		<path>0</path>
+		<description>armor</description>
+		<value>175</value>
+		<power>175</power>
+		<slot>3</slot>
+	</item>
+	<item id="304">
+		<name>kamizelka geodety</name>
+		<path>0</path>
+		<description>armor</description>
+		<value>200</value>
+		<power>200</power>
+		<slot>3</slot>
+	</item>
+	<item id="401">
+		<name>dwuwieczne glany zagłady</name>
+		<path>0</path>
+		<description>boots</description>
+		<value>250</value>
+		<power>250</power>
+		<slot>4</slot>
+	</item>
+	<item id="402">
+		<name>klapki klapkołka</name>
+		<path>0</path>
+		<description>boots</description>
+		<value>300</value>
+		<power>300</power>
+		<slot>4</slot>
+	</item>
+	<item id="403">
+		<name>skarpetka zgredka</name>
+		<path>0</path>
+		<description>boots</description>
+		<value>400</value>
+		<power>400</power>
+		<slot>4</slot>
+	</item>
+	<item id="501">
+		<name>laptop zgredka</name>
+		<path>0</path>
+		<description>useful</description>
+		<value>500</value>
+		<power>500</power>
+		<slot>5</slot>
+	</item>
+	<item id="601">
+		<name>karoca mondeo</name>
+		<path>0</path>
+		<description>shop</description>
+		<value>600</value>
+		<power>600</power>
+		<slot>6</slot>
+	</item>
+	<item id="602">
+		<name>zagranie beethovena</name>
+		<path>0</path>
+		<description>shop</description>
+		<value>800</value>
+		<power>800</power>
+		<slot>6</slot>
+	</item>
+	<item id="603">
+		<name>rogal mocy</name>
+		<path>0</path>
+		<description>shop</description>
+		<value>1000</value>
+		<power>1000</power>
+		<slot>6</slot>
+	</item>
+</items>
