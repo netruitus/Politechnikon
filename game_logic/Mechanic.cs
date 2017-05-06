@@ -41,8 +41,12 @@ namespace Politechnikon.game_logic
 
         public void InitObjects()
         {
+            //test parsera
+            XMLParser parser = new XMLParser("monsters.xml");
+            Console.WriteLine(parser.getElementByAttribute("id","102","name"));
+            Console.WriteLine(parser.getNodeAttributeValueByItsElementValue("id", "name", "spleśniała kanapka"));
+            Console.WriteLine(parser.getNodeAttributeValueByItsElementValue("id", "name", "spleśniała kanapka","experience","20"));
             //inicjalizacja obiektów i zmiennych
-
         }
 
         public void GetInput()
@@ -58,9 +62,7 @@ namespace Politechnikon.game_logic
                         Console.WriteLine("Koniec\n");
                         //engine.Exit();     
                     }
-                }
-                
-                 
+                }                   
             }
         }
         private void LoadToRenderObjects()
