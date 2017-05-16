@@ -1,34 +1,39 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <Armors>
-	<Armors id="0101">
+	<Armor id="0101">
 		<name>armors_dwuwieczne_glany_stopiej_zaglady</name>
 		<path>Resources/Graphics/Armors/armors_dwuwieczne_glany_stopiej_zaglady.png</path>
-		<x>50</x>
-		<y>50</y>
-	</Armors>
-	<Armors id="0201">
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>1</defense>
+	</Armor>
+	<Armor id="0201">
 		<name>armors_kamizelka_geodety</name>
 		<path>Resources/Graphics/Armors/armors_kamizelka_geodety.png</path>
-		<x>50</x>
-		<y>50</y>
-	</Armors>
-	<Armors id="0301">
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>2</defense>
+	</Armor>
+	<Armor id="0301">
 		<name>armors_klapki_oleksego</name>
 		<path>Resources/Graphics/Armors/armors_klapki_oleksego.png</path>
-		<x>50</x>
-		<y>50</y>
-	</Armors>
-	<Armors id="0401">
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>3</defense>
+	</Armor>
+	<Armor id="0401">
 		<name>armors_skarpetka_zgredka</name>
 		<path>Resources/Graphics/Armors/armors_skarpetka_zgredka.png</path>
-		<x>50</x>
-		<y>50</y>
-	</Armors>
-	<Armors id="0501">
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>4</defense>
+	</Armor>
+	<Armor id="0501">
 		<name>armors_zbroja_notatkowa</name>
 		<path>Resources/Graphics/Armors/armors_zbroja_notatkowa</path>
-		<x>50</x>
-		<y>50</y>
-	</Armors>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>5</defense>
+	</Armor>
 </Armors>
