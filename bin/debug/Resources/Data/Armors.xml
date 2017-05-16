@@ -7,6 +7,7 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<defense>1</defense>
+		<description>Dwuwieczne glany stopiej zagłady.</description>
 	</Armor>
 	<Armor id="0201">
 		<name>armors_kamizelka_geodety</name>
@@ -14,6 +15,7 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<defense>2</defense>
+		<description>Kamizelka geodety.</description>
 	</Armor>
 	<Armor id="0301">
 		<name>armors_klapki_oleksego</name>
@@ -21,6 +23,7 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<defense>3</defense>
+		<description>Klapki Oleksego.</description>
 	</Armor>
 	<Armor id="0401">
 		<name>armors_skarpetka_zgredka</name>
@@ -28,6 +31,7 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<defense>4</defense>
+		<description>Skarpetka Zgredka.</description>
 	</Armor>
 	<Armor id="0501">
 		<name>armors_zbroja_notatkowa</name>
@@ -35,5 +39,6 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<defense>5</defense>
+		<description>Zbroja notatkowa.</description>
 	</Armor>
 </Armors>

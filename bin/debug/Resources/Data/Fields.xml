@@ -6,23 +6,13 @@
 		<path>Resources/Graphics/Misc/entrance.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
+		<description>Wejście.</description>
 	</Field>
 	<Field id="02">
-		<name>entranceshine</name>
-		<path>Resources/Graphics/Misc/entranceshine.png</path>
-		<sizeX>50</sizeX>
-		<sizeY>50</sizeY>
-	</Field>
-	<Field id="03">
 		<name>exit</name>
 		<path>Resources/Graphics/Misc/exit.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-	</Field>
-	<Field id="04">
-		<name>exitshine</name>
-		<path>Resources/Graphics/Misc/exitshine.png</path>
-		<sizeX>50</sizeX>
-		<sizeY>50</sizeY>
+		<description>Wyjście.</description>
 	</Field>
 </Fields>

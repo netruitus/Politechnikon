@@ -10,7 +10,7 @@
 	<Background id="0201">
 		<name>plansza2</name>
 		<path>Resources/Graphics/Plansze/plansza2.png</path>
-		<sizeX>50</sizeX>
-		<sizeY>50</sizeY>
+		<sizeX>500</sizeX>
+		<sizeY>500</sizeY>
 	</Background>
 </Backgrounds>

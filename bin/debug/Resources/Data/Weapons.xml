@@ -7,6 +7,7 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<attack>1</attack>
+		<description>Kabel dusiciel.</description>
 	</Weapon>
 	<Weapon id="0201">
 		<name>weapons_niezmywalny_marker</name>
@@ -14,6 +15,7 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<attack>2</attack>
+		<description>Niezmywalny marker.</description>
 	</Weapon>
 	<Weapon id="0301">
 		<name>weapons_olowek_antymatematyczny</name>
@@ -21,6 +23,7 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<attack>3</attack>
+		<description>Ołówek antymatematyczny.</description>
 	</Weapon>
 	<Weapon id="0401">
 		<name>weapons_plomienny_zasilacz</name>
@@ -28,6 +31,7 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<attack>4</attack>
+		<description>Płomienny zasilacz.</description>
 	</Weapon>
 	<Weapon id="0501">
 		<name>weapons_zawirusowany_pendrive</name>
@@ -35,5 +39,6 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<attack>5</attack>
+		<description>Zawirusowany pendrive.</description>
 	</Weapon>
 </Weapons>
