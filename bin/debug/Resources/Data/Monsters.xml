@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Monsters>
+	<Monsters id="0101">
+		<name>monsters_cegla_z_sufitu</name>
+		<path>Resources/Graphics/Monsters/monsters_cegla_z_sufitu.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Monsters>
+	<Monsters id="0201">
+		<name>monsters_mrygajaca_lampa</name>
+		<path>Resources/Graphics/Monsters/monsters_mrygajaca_lampa.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Monsters>
+	<Monsters id="0301">
+		<name>monsters_splesniala_kanapka</name>
+		<path>Resources/Graphics/Monsters/monsters_splesniala_kanapka.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Monsters>
+	<Monsters id="0401">
+		<name>monsters_wejsciowka_z_miernictwa</name>
+		<path>Resources/Graphics/Monsters/monsters_wejsciowka_z_miernictwa.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Monsters>
+	<Monsters id="0501">
+		<name>monsters_wkurzone_kamyki</name>
+		<path>Resources/Graphics/Monsters/monsters_wkurzone_kamyki.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Monsters>
+</Monsters>

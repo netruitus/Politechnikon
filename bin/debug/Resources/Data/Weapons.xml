@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Weapons>
+	<Weapons id="0101">
+		<name>weapons_kabel_dusiciel</name>
+		<path>Resources/Graphics/Weapons/weapons_kabel_dusiciel.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Weapons>
+	<Weapons id="0201">
+		<name>weapons_niezmywalny_marker</name>
+		<path>Resources/Graphics/Weapons/weapons_niezmywalny_marker.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Weapons>
+	<Weapons id="0301">
+		<name>weapons_olowek_antymatematyczny</name>
+		<path>Resources/Graphics/Weapons/weapons_olowek_antymatematyczny.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Weapons>
+	<Weapons id="0401">
+		<name>weapons_plomienny_zasilacz</name>
+		<path>Resources/Graphics/Weapons/weapons_plomienny_zasilacz.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Weapons>
+	<Weapons id="0501">
+		<name>weapons_zawirusowany_pendrive</name>
+		<path>Resources/Graphics/Weapons/weapons_zawirusowany_pendrive.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Weapons>
+</Weapons>

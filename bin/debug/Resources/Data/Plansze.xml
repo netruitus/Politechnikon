@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Plansze>
+	<Plansze id="0101">
+		<name>plansza1</name>
+		<path>Resources/Graphics/Plansze/plansza1.png</path>
+		<x>500</x>
+		<y>500</y>
+	</Plansze>
+	<Plansze id="0201">
+		<name>plansza2</name>
+		<path>Resources/Graphics/Plansze/plansza2.png</path>
+		<x>500</x>
+		<y>500</y>
+	</Plansze>
+</Plansze>

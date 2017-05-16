@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<GUI>
+	<GUI id="01">
+		<name>Gui_menu</name>
+		<path>Resources/Graphics/GUI/Gui_menu.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+	<GUI id="02">
+		<name>Gui_texture</name>
+		<path>Resources/Graphics/GUI/Gui_texture.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+	<GUI id="03">
+		<name>czy_chcesz_nadpisac</name>
+		<path>Resources/Graphics/GUI/czy_chcesz_nadpisac.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+	<GUI id="04">
+		<name>czy_chcesz_nowa_gre</name>
+		<path>Resources/Graphics/GUI/czy_chcesz_nowa_gre.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+	<GUI id="05">
+		<name>czy_chcesz_zakonczyc</name>
+		<path>Resources/Graphics/GUI/czy_chcesz_zakonczyc.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+	<GUI id="06">
+		<name>ekran_startowy</name>
+		<path>Resources/Graphics/GUI/ekran_startowy.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+	<GUI id="07">
+		<name>najlepsze_wyniki</name>
+		<path>Resources/Graphics/GUI/najlepsze_wyniki.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+	<GUI id="08">
+		<name>nazwij_awatara</name>
+		<path>Resources/Graphics/GUI/nazwij_awatara.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+	<GUI id="09">
+		<name>w_trakcie_gry</name>
+		<path>Resources/Graphics/GUI/w_trakcie_gry.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+	<GUI id="10">
+		<name>wczytywanie</name>
+		<path>Resources/Graphics/GUI/wczytywanie.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+	<GUI id="11">
+		<name>zapisywanie</name>
+		<path>Resources/Graphics/GUI/zapisywanie.png</path>
+		<x>300</x>
+		<y>500</y>
+	</GUI>
+</GUI>

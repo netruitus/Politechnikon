@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Items>
+	<Items id="01">
+		<name>items_key</name>
+		<path>Resources/Graphics/Items/items_key.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Items>
+	<Items id="02">
+		<name>items_health_potion</name>
+		<path>Resources/Graphics/Items/items_health_potion.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Items>
+	<Items id="03">
+		<name>items_altera_de2-115</name>
+		<path>Resources/Graphics/Items/items_altera_de2-115.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Items>
+	<Items id="04">
+		<name>items_automat_nie_oddajacy_reszty</name>
+		<path>Resources/Graphics/Items/items_automat_nie_oddajacy_reszty.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Items>
+	<Items id="05">
+		<name>items_beza_bereza</name>
+		<path>Resources/Graphics/Items/items_beza_bereza.png</path>
+		<x>50</x>
+		<y>50</y>
+	</Items>
+	<Items id="06">
+		<name>items_skrzynia_indeksow</name>
+		<path>Resources/Graphics/Items/items_skrzynia_indeksow.png</path>
+		<x>64</x>
+		<y>64</y>
+	</Items>
+</Items>
