@@ -19,7 +19,7 @@ namespace Politechnikon.engine
         {
             //konstruktor - ładowanie ścieżek etc.
             Reply = null;
-            this.FilePath = "resources\\data\\" + fileName;
+            this.FilePath = "Resources\\data\\" + fileName;
             doc = new XDocument();
             doc = XDocument.Load(@FilePath);
         }
