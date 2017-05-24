@@ -8,6 +8,7 @@ using Politechnikon.engine;
 using OpenTK;
 using OpenTK.Graphics.OpenGL;
 using OpenTK.Graphics;
+using Politechnikon.game_elements;
 
 namespace Politechnikon.game_logic
 {
@@ -30,10 +31,14 @@ namespace Politechnikon.game_logic
         GameObjects,
         TextObjects
     }
+
     public class Mechanic
     {
         private List<InitializedObjectTexture> ObjectsToRender;
+        private List<InitializedObjectTexture> TextToRender;
+        private List<InitializedObjectTexture> TextObjects;
         private List<InitializedObjectTexture> InterfaceObjects;
+        private List<Text> Texts;
         private GameState gameState;
         private GameState lastGameState;
         private OpenTK.Input.MouseDevice Mouse;
@@ -42,13 +47,13 @@ namespace Politechnikon.game_logic
         private bool QuitConfirm;
         private bool GameHasStarted;
         private bool GameRunning;
-        public Mechanic(List<InitializedObjectTexture> objectList,Engine eng)
+        public Mechanic(List<InitializedObjectTexture> objectList, List<InitializedObjectTexture> textList, Engine eng)
         {    
-            InterfaceObjects = new List<InitializedObjectTexture>();
             this.QuitConfirm = false;
             this.gameState = GameState.InMenu;
             this.Loading = true; 
-            this.ObjectsToRender = objectList;        
+            this.ObjectsToRender = objectList;
+            this.TextToRender = textList;
             this.engine = eng;
             this.Mouse = engine.Mouse;          
         }
@@ -56,7 +61,9 @@ namespace Politechnikon.game_logic
         public void InitObjects()
         {
             //inicjalizacja obiektów i zmiennych
-                  
+            this.InterfaceObjects = new List<InitializedObjectTexture>();
+            this.TextObjects = new List<InitializedObjectTexture>();
+            this.Texts = new List<Text>(); 
         }
 
         public void GetInput()
@@ -252,6 +259,16 @@ namespace Politechnikon.game_logic
                 ObjectsToRender.Add(InterfaceObjects[i]);
             }
         }
+
+        private void LoadToRenderTextObjects()
+        {
+            for (int i = 0; i < TextObjects.Count; i++)
+            {
+                TextToRender.Add(TextObjects[i]);
+            }
+        }
+
+
         //czyszczenie renderera lub jego elementów
         private void ClearRenderer(BufforClear Option)
         {
@@ -269,6 +286,7 @@ namespace Politechnikon.game_logic
                     ObjectsToRender.Remove(InterfaceObjects[i]);
                 }  
             }
+
         }
         //kasowanie zawartości bufora obiektów interfejsu
         private void ClearInterfaceObjectBuffer()
@@ -279,6 +297,23 @@ namespace Politechnikon.game_logic
             }
         }
 
+        private void ClearTextRenderer()
+        {
+            for (int i = 0; i < TextToRender.Count; i++)
+            {
+                TextToRender.Remove(TextToRender[i]);
+            }
+        }
+
+        private void ClearTextObjectBuffer()
+        {
+            for (int i = 0; i < TextObjects.Count; i++)
+            {
+                TextObjects.Remove(TextObjects[i]);
+            }
+        }
+
+
         public void update()
         {
             //reakcje na zmiany stanów i inputy
@@ -287,11 +322,8 @@ namespace Politechnikon.game_logic
                 if (Loading == true)
                 {
                     Loading = false;
-                    InitializedObjectTexture Menu = new InitializedObjectTexture(500, 0, 300, 500, "GUI\\ekran_startowy.png", Color.White);
-                    InterfaceObjects.Add(Menu);
-                    ClearRenderer(BufforClear.InterfaceObjects);
-                    LoadToRenderInterfaceObjects();   
-                    ClearInterfaceObjectBuffer();
+                    LoadGuiTexture(500, 0, 06);
+                    RenderReload();
                 }        
             }
             else if (gameState == GameState.InNewGame)
@@ -299,11 +331,9 @@ namespace Politechnikon.game_logic
                 if (Loading == true)
                 {
                     Loading = false;
-                    InitializedObjectTexture NewGame = new InitializedObjectTexture(500, 0, 300, 500, "GUI\\nazwij_awatara.png", Color.White);
-                    InterfaceObjects.Add(NewGame);
-                    ClearRenderer(BufforClear.InterfaceObjects);
-                    LoadToRenderInterfaceObjects();
-                    ClearInterfaceObjectBuffer();
+                    LoadGuiTexture(500, 0, 08);
+                    LoadText(525, 135, 25, "Nazwij swojego avatara");           
+                    RenderReload();
                 }  
             }
             else if (gameState == GameState.AreYouSure)
@@ -311,24 +341,18 @@ namespace Politechnikon.game_logic
                 if (Loading == true)
                 {
                     Loading = false;
-                    InitializedObjectTexture AreYouSure = new InitializedObjectTexture(500, 0, 300, 500, "GUI\\czy_chcesz_nadpisac.png", Color.White);
-                    InterfaceObjects.Add(AreYouSure);
-                    ClearRenderer(BufforClear.InterfaceObjects);
-                    LoadToRenderInterfaceObjects();
-                    ClearInterfaceObjectBuffer();
+                    LoadGuiTexture(500, 0, 03);
+                    LoadText(515, 190, 18, "Czy na pewno chcesz zakończyć grę?");
+                    RenderReload();
                 }
             }
             else if (gameState == GameState.InLoad)
             {
                 if (Loading == true)
                 {
-                    //dodać ładowanie zapisów
                     Loading = false;
-                    InitializedObjectTexture InLoad = new InitializedObjectTexture(500, 0, 300, 500, "GUI\\wczytywanie.png", Color.White);
-                    InterfaceObjects.Add(InLoad);
-                    ClearRenderer(BufforClear.InterfaceObjects);
-                    LoadToRenderInterfaceObjects();
-                    ClearInterfaceObjectBuffer();
+                    LoadGuiTexture(500, 0, 10);
+                    RenderReload();
                 }
             }
             else if (gameState == GameState.InHighScore)
@@ -336,13 +360,37 @@ namespace Politechnikon.game_logic
                 if (Loading == true)
                 {
                     Loading = false;
-                    InitializedObjectTexture InHighScore = new InitializedObjectTexture(500, 0, 300, 500, "GUI\\najlepsze_wyniki.png", Color.White);
-                    InterfaceObjects.Add(InHighScore);
-                    ClearRenderer(BufforClear.InterfaceObjects);
-                    LoadToRenderInterfaceObjects();
-                    ClearInterfaceObjectBuffer();
+                    LoadGuiTexture(500, 0, 07);
+                    RenderReload();
                 }
             }
+        }
+
+        private void LoadText(int x, int y, int fontSize, String txt)
+        {
+            Text tekst = new Text(x, y, fontSize, txt);
+            InitializedObjectTexture tekstTexture = new InitializedObjectTexture(tekst.X, tekst.Y, tekst.SizeX, tekst.SizeY, tekst.GeneratedBMP, Color.White);
+            TextObjects.Add(tekstTexture);
+        }
+
+        private void LoadGuiTexture(int x, int y, int id)
+        {
+            Background background = new Background(x, y, id, BackgroundType.GUI);
+            InitializedObjectTexture Menu = new InitializedObjectTexture(background.X, background.Y, background.SizeX, background.SizeY, background.Path, Color.White);
+            InterfaceObjects.Add(Menu);
+        }
+
+
+
+
+        private void RenderReload()
+        {
+            ClearRenderer(BufforClear.Everything);
+            ClearTextRenderer();
+            LoadToRenderInterfaceObjects();
+            LoadToRenderTextObjects();
+            ClearInterfaceObjectBuffer();
+            ClearTextObjectBuffer();
         }
 
 
