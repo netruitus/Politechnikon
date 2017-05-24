@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Politechnikon.objects
+namespace Politechnikon.game_logic
 {
-    class Button
+    class NameWriter
     {
     }
 }

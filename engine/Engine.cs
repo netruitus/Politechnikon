@@ -13,124 +13,16 @@ using Politechnikon.game_logic;
 
 namespace Politechnikon.engine
 {
-    //struktura, która opisuje element listy tektur gotowych do wyrenderowania
-    public struct InitializedObjectTexture
-    {
-        private Texture2D texture;
-        private Vector2 position;
-        private int width;
-        private int height;
-        private Color color;
-        private string texturePath;
 
-        public InitializedObjectTexture(int x, int y, int width, int height, string texturePath, Color color)
-        {
-            this.position.X = x;
-            this.position.Y = y;
-            this.width = width;
-            this.height = height;
-            this.texturePath = texturePath;
-            this.color = color;
-            this.texture = ContentPipe.LoadTexture(this.texturePath);
-        }
-
-        public string TexturePath
-        {
-            get
-            {
-                return texturePath;
-            }
-            set
-            {
-                texturePath = value;
-                texture = ContentPipe.LoadTexture(texturePath);
-            }
-        }
-        public Texture2D Texture
-        {
-            get
-            {
-                return texture;
-            }
-            set
-            {
-                texture = value;
-            }
-        }
-        public Color Color
-        {
-            get
-            {
-                return color;
-            }
-            set
-            {
-                color = value;
-            }
-        }
-        public int X
-        {
-            get
-            {
-                return (int)position.X;
-            }
-            set
-            {
-                position.X = (float)value;
-            }
-        }
-        public int Y
-        {
-            get
-            {
-                return (int)position.Y;
-            }
-            set
-            {
-                position.Y = (float)value;
-            }
-        }
-        public Vector2 Position
-        {
-            get
-            {
-                return position;
-            }
-        }
-        public int Width
-        {
-            get
-            {
-                return width;
-            }
-            set
-            {
-                width = value;
-            }
-        }
-        public int Height
-        {
-            get
-            {
-                return height;
-            }
-            set
-            {
-                height = value;
-            }
-        }
-    }
     public class Engine : GameWindow
     {
         private Mechanic GameMechanic;
         private List<InitializedObjectTexture> ObjectTextureList;
-        private Texture2D tileset;
-        private Level level;
+        private List<InitializedObjectTexture> TextTextureList;
         private View view;
         private float sc = 1;
-
-
         private static Bitmap Icon;
+
         public Engine(int width, int height) : base(width,height,GraphicsMode.Default, "Politechnikon", GameWindowFlags.Default, DisplayDevice.Default, 2, 0, GraphicsContextFlags.ForwardCompatible)
         {
             initDisplay();
@@ -140,14 +32,15 @@ namespace Politechnikon.engine
             view = new View(Vector2.Zero, 1.0, 0.0);
             Input.Initialize(this);
             ObjectTextureList = new List<InitializedObjectTexture>();
-            GameMechanic = new Mechanic(ObjectTextureList,this);
+            TextTextureList = new List<InitializedObjectTexture>();
+            GameMechanic = new Mechanic(ObjectTextureList, TextTextureList, this);
         }
 
   
         private void initDisplay()
         {
             //inicjalizacja ikonki
-            Icon = (Bitmap)Image.FromFile(@"resources\\graphics\\misc\\Icon.png");
+            Icon = (Bitmap)Image.FromFile(@"Resources\\graphics\\misc\\Icon.png");
             Icon.SetResolution(64, 64);
             base.Icon = System.Drawing.Icon.FromHandle(Icon.GetHicon());
             //ustawienie vsynca na adaptywny (średnio w granicach limit do 60 fps)
@@ -196,7 +89,12 @@ namespace Politechnikon.engine
             {
                 RectangleF TextureRect = new RectangleF(0, 0, ObjectTextureList[i].Width, ObjectTextureList[i].Height);
                 Sprite.Draw(ObjectTextureList[i].Texture, ObjectTextureList[i].Position, new Vector2(1,1), ObjectTextureList[i].Color, Vector2.Zero, TextureRect);
-            }     
+            }
+            for (int i = 0; i < TextTextureList.Count; i++)
+            {
+                RectangleF TextureRect = new RectangleF(0, 0, TextTextureList[i].Width, TextTextureList[i].Height);
+                Sprite.Draw(TextTextureList[i].Texture, TextTextureList[i].Position, new Vector2(1, 1), TextTextureList[i].Color, Vector2.Zero, TextureRect);
+            }
             
             this.SwapBuffers();
         }
