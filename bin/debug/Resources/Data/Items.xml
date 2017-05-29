@@ -27,7 +27,7 @@
 		<path>Graphics/Items/items_automat_nie_oddajacy_reszty.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<description>Cegła z sufitu.</description>
+		<description>Automat nie oddający reszty.</description>
 	</Item>
 	<Item id="004">
 		<name>items_beza_bereza</name>

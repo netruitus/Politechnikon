@@ -16,29 +16,29 @@
 		<description>Pole wyjścia.</description>
 	</Field>
 	<Field id="03">
-		<name>odkryte</name>
-		<path>Graphics/Fields/odkryte.png</path>
-		<sizeX>50</sizeX>
-		<sizeY>50</sizeY>
-		<description>Pole odkryte.</description>
-	</Field>
-	<Field id="04">
 		<name>zakryte</name>
 		<path>Graphics/Fields/zakryte.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<description>Pole zakryte.</description>
 	</Field>
+	<Field id="04">
+		<name>odkryte</name>
+		<path>Graphics/Fields/odkryte.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>Pole odkryte.</description>
+	</Field>
 	<Field id="05">
 		<name>item</name>
-		<path>Graphics/Fields/item.png</path>
+		<path>Graphics/Fields/odkryte.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<description>Pole z przedmiotem.</description>
 	</Field>
 	<Field id="06">
 		<name>monster</name>
-		<path>Graphics/Fields/monster.png</path>
+		<path>Graphics/Fields/odkryte.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<description>Pole z potworem.</description>

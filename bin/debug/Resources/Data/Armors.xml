@@ -35,7 +35,7 @@
 	</Armor>
 	<Armor id="0501">
 		<name>armors_zbroja_notatkowa</name>
-		<path>Graphics/Armors/armors_zbroja_notatkowa</path>
+		<path>Graphics/Armors/armors_zbroja_notatkowa.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<defense>5</defense>
