@@ -3,7 +3,7 @@
 <Weapons>
 	<Weapon id="0101">
 		<name>weapons_kabel_dusiciel</name>
-		<path>Resources/Graphics/Weapons/weapons_kabel_dusiciel.png</path>
+		<path>Graphics/Weapons/weapons_kabel_dusiciel.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<attack>1</attack>
@@ -11,7 +11,7 @@
 	</Weapon>
 	<Weapon id="0201">
 		<name>weapons_niezmywalny_marker</name>
-		<path>Resources/Graphics/Weapons/weapons_niezmywalny_marker.png</path>
+		<path>Graphics/Weapons/weapons_niezmywalny_marker.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<attack>2</attack>
@@ -19,7 +19,7 @@
 	</Weapon>
 	<Weapon id="0301">
 		<name>weapons_olowek_antymatematyczny</name>
-		<path>Resources/Graphics/Weapons/weapons_olowek_antymatematyczny.png</path>
+		<path>Graphics/Weapons/weapons_olowek_antymatematyczny.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<attack>3</attack>
@@ -27,7 +27,7 @@
 	</Weapon>
 	<Weapon id="0401">
 		<name>weapons_plomienny_zasilacz</name>
-		<path>Resources/Graphics/Weapons/weapons_plomienny_zasilacz.png</path>
+		<path>Graphics/Weapons/weapons_plomienny_zasilacz.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<attack>4</attack>
@@ -35,7 +35,7 @@
 	</Weapon>
 	<Weapon id="0501">
 		<name>weapons_zawirusowany_pendrive</name>
-		<path>Resources/Graphics/Weapons/weapons_zawirusowany_pendrive.png</path>
+		<path>Graphics/Weapons/weapons_zawirusowany_pendrive.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<attack>5</attack>

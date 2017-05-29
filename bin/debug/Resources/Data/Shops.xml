@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Shops>
+	<Shop id="0101">
+		<name>maciek</name>
+		<path>Graphics/Shops/maciek.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>Sklep Maćka.</description>
+	</Shop>
+	<Shop id="0201">
+		<name>seweryn</name>
+		<path>Graphics/Shops/seweryn.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>Sklep Seweryna.</description>
+	</Shop>
+	<Shop id="0301">
+		<name>automat</name>
+		<path>Graphics/Shops/automat.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>Sklep automat.</description>
+	</Shop>
+</Shops>

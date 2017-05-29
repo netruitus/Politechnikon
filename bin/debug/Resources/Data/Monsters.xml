@@ -3,52 +3,119 @@
 <Monsters>
 	<Monster id="0101">
 		<name>monsters_cegla_z_sufitu</name>
-		<path>Resources/Graphics/Monsters/monsters_cegla_z_sufitu.png</path>
+		<path>Graphics/Monsters/monsters_cegla_z_sufitu.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<life>1</life>
 		<attack>1</attack>
 		<defense>1</defense>
+		<gold>1</gold>
+		<experience>1</experience>
+		<score>1</score>
 		<description>Cegła z sufitu.</description>
 	</Monster>
+	<Monster id="0102">
+		<name>monsters_boss_naelektryzowana_cegla_z_sufitu</name>
+		<path>Graphics/Monsters/monsters_boss_naelektryzowana_cegla_z_sufitu.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<life>10</life>
+		<attack>10</attack>
+		<defense>10</defense>
+		<gold>10</gold>
+		<experience>10</experience>
+		<score>10</score>
+		<description>Boss - Naelektryzowana cegła z sufitu.</description>
+	</Monster>
 	<Monster id="0201">
-		<name>monsters_mrygajaca_lampa</name>
-		<path>Resources/Graphics/Monsters/monsters_mrygajaca_lampa.png</path>
+		<name>monsters_splesniala_kanapka</name>
+		<path>Graphics/Monsters/monsters_splesniala_kanapka.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<life>2</life>
 		<attack>2</attack>
 		<defense>2</defense>
-		<description>Mrygająca lampa.</description>
+		<gold>2</gold>
+		<experience>2</experience>
+		<score>2</score>
+		<description>Spleśniała kanapka.</description>
+	</Monster>
+	<Monster id="0202">
+		<name>monsters_boss_bardzo_splesniala_kanapka.png</name>
+		<path>Graphics/Monsters/monsters_boss_bardzo_splesniala_kanapka.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<life>20</life>
+		<attack>20</attack>
+		<defense>20</defense>
+		<gold>20</gold>
+		<experience>20</experience>
+		<score>20</score>
+		<description>Boss - Bardzo spleśniała kanapka.</description>
 	</Monster>
 	<Monster id="0301">
-		<name>monsters_splesniala_kanapka</name>
-		<path>Resources/Graphics/Monsters/monsters_splesniala_kanapka.png</path>
+		<name>monsters_wejsciowka_z_miernictwa</name>
+		<path>Graphics/Monsters/monsters_wejsciowka_z_miernictwa.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<life>3</life>
 		<attack>3</attack>
 		<defense>3</defense>
-		<description>Spleśniała kanapka.</description>
+		<gold>3</gold>
+		<experience>3</experience>
+		<score>3</score>
+		<description>Wejściówka z miernictwa.</description>
+	</Monster>
+	<Monster id="0302">
+		<name>monsters_boss_zaliczenie_z_miernictwa</name>
+		<path>Graphics/Monsters/monsters_boss_zaliczenie_z_miernictwa.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<life>30</life>
+		<attack>30</attack>
+		<defense>30</defense>
+		<gold>30</gold>
+		<experience>30</experience>
+		<score>30</score>
+		<description>Boss - Zaliczenie z miernictwa.</description>
 	</Monster>
 	<Monster id="0401">
-		<name>monsters_wejsciowka_z_miernictwa</name>
-		<path>Resources/Graphics/Monsters/monsters_wejsciowka_z_miernictwa.png</path>
+		<name>monsters_wkurzone_kamyki</name>
+		<path>Graphics/Monsters/monsters_wkurzone_kamyki.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<life>4</life>
 		<attack>4</attack>
 		<defense>4</defense>
-		<description>Wejściówka z miernictwa.</description>
+		<gold>4</gold>
+		<experience>4</experience>
+		<score>4</score>
+		<description>Wkurzone kamyki.</description>
+	</Monster>
+	<Monster id="0402">
+		<name>monsters_boss_wściekle_wkurzone_kamyki</name>
+		<path>Graphics/Monsters/monsters_boss_wściekle_wkurzone_kamyki.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<life>40</life>
+		<attack>40</attack>
+		<defense>40</defense>
+		<gold>40</gold>
+		<experience>40</experience>
+		<score>40</score>
+		<description>Boss - Wściekle wkurzone kamyki.</description>
 	</Monster>
 	<Monster id="0501">
-		<name>monsters_wkurzone_kamyki</name>
-		<path>Resources/Graphics/Monsters/monsters_wkurzone_kamyki.png</path>
+		<name>monsters_mrygajaca_lampa</name>
+		<path>Graphics/Monsters/monsters_mrygajaca_lampa.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<life>5</life>
 		<attack>5</attack>
 		<defense>5</defense>
-		<description>Wkurzone kamyki.</description>
+		<gold>5</gold>
+		<experience>5</experience>
+		<score>5</score>
+		<description>Mrygająca lampa.</description>
 	</Monster>
 </Monsters>
