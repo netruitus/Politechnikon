@@ -14,31 +14,46 @@ namespace Politechnikon.game_elements
         Others
     }
 
+    public enum EffectType
+    {
+        Nothing,
+        Healing,
+        Learning
+    }
+
     public class Item : ObjectAbstrakt
     {
-        private ItemType Type;
+        private ItemType ItType;
+        private EffectType efType;
         private int itemAttributeValue;
+        
         public Item(int x, int y, int id, ItemType type)
         {
             this.X = x;
             this.Y = y;
-            this.Type = type;
+            this.ItType = type;
             this.Id = id;
             this.itemAttributeValue = -1;
 
-            if (this.Type == ItemType.Armor)
+            if (this.ItType == ItemType.Armor)
             {
                 LoadArmorVariables(this.Id);
             }
-            else if (this.Type == ItemType.Weapon)
+            else if (this.ItType == ItemType.Weapon)
             {
                 LoadWeaponVariables(this.Id);
             }
-            else if (this.Type == ItemType.Others)
+            else if (this.ItType == ItemType.Others)
             {
                 LoadOtherVariables(this.Id);
             }
 
+        }
+
+        public EffectType EfType
+        {
+            get { return efType; }
+            set { this.efType = value; }
         }
 
         public int ItemAttributeValue
@@ -78,6 +93,20 @@ namespace Politechnikon.game_elements
             ParseDescription(parser);
             ParseSizeX(parser);
             ParseSizeY(parser);
+            var temp = Int32.Parse(parser.getElementByAttribute("id", "" + id, "effectType"));
+            this.itemAttributeValue = Int32.Parse(parser.getElementByAttribute("id", "" + id, "effectStrength")); 
+            if (temp == 0)
+            {
+                EfType = EffectType.Nothing;
+            }
+            else if (temp == 1)
+            {
+                EfType = EffectType.Healing;
+            }
+            else if (temp == 2)
+            {
+                EfType = EffectType.Learning;
+            }
         }
 
 
