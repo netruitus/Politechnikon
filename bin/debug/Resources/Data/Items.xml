@@ -6,6 +6,8 @@
 		<path>Graphics/Items/items_key.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
+		<effectID>000</effectID>
+		<effectForce>0</effectForce>
 		<description>Klucz.</description>
 	</Item>
 	<Item id="001">
@@ -13,6 +15,8 @@
 		<path>Graphics/Items/items_health_potion.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
+		<effectID>001</effectID>
+		<effectForce>1</effectForce>
 		<description>Potka zdrowia.</description>
 	</Item>
 	<Item id="002">
@@ -20,6 +24,8 @@
 		<path>Graphics/Items/items_altera_de2-115.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
+		<effectID>002</effectID>
+		<effectForce>2</effectForce>
 		<description>Płytka Altera DE2-115.</description>
 	</Item>
 	<Item id="003">
@@ -27,6 +33,8 @@
 		<path>Graphics/Items/items_automat_nie_oddajacy_reszty.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
+		<effectID>003</effectID>
+		<effectForce>3</effectForce>
 		<description>Automat nie oddający reszty.</description>
 	</Item>
 	<Item id="004">
@@ -34,6 +42,8 @@
 		<path>Graphics/Items/items_beza_bereza.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
+		<effectID>004</effectID>
+		<effectForce>4</effectForce>
 		<description>Beza Bereza.</description>
 	</Item>
 	<Item id="005">
@@ -41,6 +51,8 @@
 		<path>Graphics/Items/items_skrzynia_indeksow.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
+		<effectID>005</effectID>
+		<effectForce>5</effectForce>
 		<description>Skrzynia indeksów.</description>
 	</Item>
 	<Item id="255">
@@ -48,6 +60,8 @@
 		<path>null</path>
 		<sizeX>null</sizeX>
 		<sizeY>null</sizeY>
+		<effectID>null</effectID>
+		<effectForce>null</effectForce>
 		<description>null</description>
 	</Item>
 </Items>
