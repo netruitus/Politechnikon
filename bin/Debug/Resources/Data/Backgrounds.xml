@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Backgrounds>
+	<Background id="0000">
+		<name>blank</name>
+		<path>Graphics/Plansze/blank.png</path>
+		<sizeX>500</sizeX>
+		<sizeY>500</sizeY>
+	</Background>
+	<Background id="0101">
+		<name>plansza1</name>
+		<path>Graphics\Plansze\plansza1.png</path>
+		<sizeX>500</sizeX>
+		<sizeY>500</sizeY>
+	</Background>
+	<Background id="0201">
+		<name>plansza2</name>
+		<path>Graphics/Plansze/plansza2.png</path>
+		<sizeX>500</sizeX>
+		<sizeY>500</sizeY>
+	</Background>
+</Backgrounds>
