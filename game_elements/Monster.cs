@@ -13,33 +13,50 @@ namespace Politechnikon.game_elements
         private int attack;
         private int currentHP;
         private int maxHP;
+        private bool isBoss;
 
 
-        public Monster(int x, int y, int id)
+        public Monster(int x, int y, int id, bool Boss)
         {
             this.X = x;
             this.Y = y;
             this.Id = id;
-
+            this.isBoss = Boss;
             LoadMonsterVariables(this.Id);
             
         }
         private void LoadMonsterVariables(int id)
-        {    
-            XMLParser parser = new XMLParser("Monsters.xml");
-            ParseName(parser);
-            ParsePath(parser);
-            ParseDescription(parser);
-            ParseSizeX(parser);
-            ParseSizeY(parser);
+        {
+            XMLParser parser;
+            if (isBoss == false)
+            {
+                parser = new XMLParser("Monsters.xml");
+            }
+            else
+            {
+                parser = new XMLParser("BossMonsters.xml");
+            }
+            if (parser != null)
+            {
+                ParseName(parser);
+                ParsePath(parser);
+                ParseDescription(parser);
+                ParseSizeX(parser);
+                ParseSizeY(parser);
 
-            this.defense = Int32.Parse(parser.getElementByAttribute("id", "" + id, "defense"));
-            this.attack = Int32.Parse(parser.getElementByAttribute("id", "" + id, "attack"));
-            this.maxHP = Int32.Parse(parser.getElementByAttribute("id", "" + id, "life"));
-            this.currentHP = this.maxHP;
+                this.defense = Int32.Parse(parser.getElementByAttribute("id", "" + id, "defense"));
+                this.attack = Int32.Parse(parser.getElementByAttribute("id", "" + id, "attack"));
+                this.maxHP = Int32.Parse(parser.getElementByAttribute("id", "" + id, "life"));
+                this.currentHP = this.maxHP;
+            }
+
         }
 
-
+        public bool IsBoss
+        {
+            get { return isBoss; }
+            set { this.isBoss = value; }
+        }
 
         public int Defense
         {

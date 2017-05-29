@@ -96,20 +96,20 @@ namespace Politechnikon.game_elements
         //generowanie bitmapy tekstu
         private Image DrawText(String text, Font font, Color textColor, Color backColor)
         {
-            Image img = new Bitmap(1, 1);
-            Graphics drawing = Graphics.FromImage(img);
-            SizeF textSize = drawing.MeasureString(text, font);
-            img.Dispose();
-            drawing.Dispose();
-            img = new Bitmap((int)textSize.Width, (int)textSize.Height);
-            drawing = Graphics.FromImage(img);
-            drawing.Clear(backColor);
-            Brush textBrush = new SolidBrush(textColor);
-            drawing.DrawString(text, font, textBrush, 0, 0);
-            drawing.Save();
-            textBrush.Dispose();
-            drawing.Dispose();
-            return img;
+                Image img = new Bitmap(1, 1);
+                Graphics drawing = Graphics.FromImage(img);
+                SizeF textSize = drawing.MeasureString(text, font);
+                img.Dispose();
+                drawing.Dispose();
+                img = new Bitmap((int)textSize.Width, (int)textSize.Height);
+                drawing = Graphics.FromImage(img);
+                drawing.Clear(backColor);
+                Brush textBrush = new SolidBrush(textColor);
+                drawing.DrawString(text, font, textBrush, 0, 0);
+                drawing.Save();
+                textBrush.Dispose();
+                drawing.Dispose();
+                return img;
         }
     }
 }
