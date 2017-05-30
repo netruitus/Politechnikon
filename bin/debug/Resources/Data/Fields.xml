@@ -3,42 +3,42 @@
 <Fields>
 	<Field id="01">
 		<name>entrance</name>
-		<path>Resources/Graphics/Misc/entrance.png</path>
+		<path>Graphics/Fields/entrance.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<description>Pole wejścia.</description>
 	</Field>
 	<Field id="02">
-		<name>exit</name>
-		<path>Resources/Graphics/Misc/exit.png</path>
+		<name>exitshine</name>
+		<path>Graphics/Fields/exit.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<description>Pole wyjścia.</description>
 	</Field>
 	<Field id="03">
-		<name>covered</name>
-		<path>Resources/Graphics/Misc/covered.png</path>
+		<name>zakryte</name>
+		<path>Graphics/Fields/zakryte.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<description>Pole zakryte.</description>
 	</Field>
 	<Field id="04">
-		<name>empty</name>
-		<path>Resources/Graphics/Misc/empty.png</path>
+		<name>odkryte</name>
+		<path>Graphics/Fields/odkryte.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<description>Pole puste.</description>
+		<description>Pole odkryte.</description>
 	</Field>
 	<Field id="05">
 		<name>item</name>
-		<path>Resources/Graphics/Misc/item.png</path>
+		<path>Graphics/Fields/odkryte.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<description>Pole z przedmiotem.</description>
 	</Field>
 	<Field id="06">
 		<name>monster</name>
-		<path>Resources/Graphics/Misc/monster.png</path>
+		<path>Graphics/Fields/odkryte.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<description>Pole z potworem.</description>
