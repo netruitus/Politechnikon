@@ -87,7 +87,7 @@
 	</GUI>
 	<GUI id="15">
 		<name>zaznaczenie</name>
-		<path>Graphics/GUI/zaznaczenie.png</path>
+		<path>Graphics/Fields/zaznaczenie.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 	</GUI>
