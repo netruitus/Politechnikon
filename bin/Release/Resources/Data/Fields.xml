@@ -3,10 +3,10 @@
 <Fields>
 	<Field id="0">
 		<name>unexplored</name>
-		<path>Graphics/Fields/nieodkryte.png</path>
+		<path>Graphics/Fields/zakryte.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<description>Pole nieodkryte</description>
+		<description>Pole zakryte</description>
 	</Field>
 	<Field id="1">
 		<name>empty</name>
