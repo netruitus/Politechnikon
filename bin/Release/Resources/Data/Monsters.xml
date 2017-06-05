@@ -6,10 +6,11 @@
 		<path>Graphics/Monsters/monsters_cegla_z_sufitu.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<life>1</life>
+		<life>3</life>
 		<attack>1</attack>
 		<defense>1</defense>
-		<description>Cegła z sufitu.</description>
+		<experience>5</experience>
+		<description>Cegła z sufitu</description>
 	</Monster>
 	<Monster id="0201">
 		<name>monsters_mrygajaca_lampa</name>
@@ -19,7 +20,8 @@
 		<life>2</life>
 		<attack>2</attack>
 		<defense>2</defense>
-		<description>Mrygająca lampa.</description>
+		<experience>7</experience>
+		<description>Mrygająca lampa</description>
 	</Monster>
 	<Monster id="0301">
 		<name>monsters_splesniala_kanapka</name>
@@ -27,28 +29,31 @@
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<life>3</life>
-		<attack>3</attack>
+		<attack>1</attack>
 		<defense>3</defense>
-		<description>Spleśniała kanapka.</description>
+		<experience>10</experience>
+		<description>Spleśniała kanapka</description>
 	</Monster>
 	<Monster id="0401">
 		<name>monsters_wejsciowka_z_miernictwa</name>
 		<path>Graphics/Monsters/monsters_wejsciowka_z_miernictwa.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<life>4</life>
-		<attack>4</attack>
-		<defense>4</defense>
-		<description>Wejściówka z miernictwa.</description>
+		<life>3</life>
+		<attack>5</attack>
+		<defense>2</defense>
+		<experience>12</experience>
+		<description>Wejściówka z miernictwa</description>
 	</Monster>
 	<Monster id="0501">
 		<name>monsters_wkurzone_kamyki</name>
 		<path>Graphics/Monsters/monsters_wkurzone_kamyki.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<life>5</life>
+		<life>8</life>
 		<attack>5</attack>
 		<defense>5</defense>
-		<description>Wkurzone kamyki.</description>
+		<experience>15</experience>
+		<description>Wkurzone kamyki</description>
 	</Monster>
 </Monsters>

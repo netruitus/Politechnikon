@@ -1,21 +1,27 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 
 <Backgrounds>
-	<Background id="0000">
+	<Background id="0">
 		<name>blank</name>
 		<path>Graphics/Plansze/blank.png</path>
 		<sizeX>500</sizeX>
 		<sizeY>500</sizeY>
 	</Background>
-	<Background id="0101">
+	<Background id="1">
 		<name>plansza1</name>
 		<path>Graphics\Plansze\plansza1.png</path>
 		<sizeX>500</sizeX>
 		<sizeY>500</sizeY>
 	</Background>
-	<Background id="0201">
+	<Background id="2">
 		<name>plansza2</name>
 		<path>Graphics/Plansze/plansza2.png</path>
+		<sizeX>500</sizeX>
+		<sizeY>500</sizeY>
+	</Background>
+	<Background id="3">
+		<name>plansza3</name>
+		<path>Graphics/Plansze/plansza3.png</path>
 		<sizeX>500</sizeX>
 		<sizeY>500</sizeY>
 	</Background>

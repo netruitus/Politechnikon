@@ -6,7 +6,7 @@
 		<path>Graphics/Items/items_key.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<description>Klucz.</description>
+		<description>Klucz</description>
 		<effectType>0</effectType>
 		<effectStrength>0</effectStrength>
 	</Item>
@@ -15,7 +15,7 @@
 		<path>Graphics/Items/items_health_potion.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<description>Potka zdrowia.</description>
+		<description>Mikstura sił witalnych</description>
 		<effectType>1</effectType>
 		<effectStrength>20</effectStrength>
 	</Item>
@@ -24,25 +24,25 @@
 		<path>Graphics/Items/items_altera_de2-115.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<description>Płytka Altera DE2-115.</description>
+		<description>Płytka Altera DE2-115</description>
 		<effectType>2</effectType>
-		<effectStrength>100</effectStrength>
+		<effectStrength>5</effectStrength>
 	</Item>
 	<Item id="003">
 		<name>items_automat_nie_oddajacy_reszty</name>
 		<path>Graphics/Items/items_automat_nie_oddajacy_reszty.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<description>Cud na politechnice</description>
+		<description>Automat nieoddający reszty</description>
 		<effectType>2</effectType>
-		<effectStrength>50</effectStrength>
+		<effectStrength>10</effectStrength>
 	</Item>
 	<Item id="004">
 		<name>items_beza_bereza</name>
 		<path>Graphics/Items/items_beza_bereza.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<description>Beza Bereza.</description>
+		<description>Beza Bereza</description>
 		<effectType>1</effectType>
 		<effectStrength>10</effectStrength>
 	</Item>
@@ -51,16 +51,16 @@
 		<path>Graphics/Items/items_skrzynia_indeksow.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
-		<description>Skrzynia indeksów.</description>
+		<description>Skrzynia indeksów</description>
 		<effectType>2</effectType>
-		<effectStrength>150</effectStrength>
+		<effectStrength>15</effectStrength>
 	</Item>
 	<Item id="255">
 		<name>null</name>
-		<path>null</path>
-		<sizeX>0</sizeX>
-		<sizeY>0</sizeY>
-		<description>null</description>
+		<path>Graphics/Items/null.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>nic</description>
 		<effectType>0</effectType>
 		<effectStrength>0</effectStrength>
 	</Item>

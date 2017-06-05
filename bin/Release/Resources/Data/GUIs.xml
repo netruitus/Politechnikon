@@ -67,4 +67,28 @@
 		<sizeX>300</sizeX>
 		<sizeY>500</sizeY>
 	</GUI>
+	<GUI id="12">
+		<name>okno_interakcji_ekwipunek</name>
+		<path>Graphics/GUI/okno_interakcji_ekwipunek.png</path>
+		<sizeX>75</sizeX>
+		<sizeY>60</sizeY>
+	</GUI>
+	<GUI id="13">
+		<name>okno_interakcji_mikstura</name>
+		<path>Graphics/GUI/okno_interakcji_mikstura.png</path>
+		<sizeX>75</sizeX>
+		<sizeY>60</sizeY>
+	</GUI>
+	<GUI id="14">
+		<name>okno_interakcji_plecak</name>
+		<path>Graphics/GUI/okno_interakcji_plecak.png</path>
+		<sizeX>75</sizeX>
+		<sizeY>60</sizeY>
+	</GUI>
+	<GUI id="15">
+		<name>zaznaczenie</name>
+		<path>Graphics/GUI/zaznaczenie.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+	</GUI>
 </GUIs>
