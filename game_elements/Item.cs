@@ -23,7 +23,7 @@ namespace Politechnikon.game_elements
 
     public class Item : ObjectAbstrakt
     {
-        private ItemType ItType;
+        private ItemType itType;
         private EffectType efType;
         private int itemAttributeValue;
         
@@ -31,23 +31,30 @@ namespace Politechnikon.game_elements
         {
             this.X = x;
             this.Y = y;
-            this.ItType = type;
+            this.itType = type;
             this.Id = id;
             this.itemAttributeValue = -1;
+            this.efType = EffectType.Nothing;
 
-            if (this.ItType == ItemType.Armor)
+            if (this.itType == ItemType.Armor)
             {
                 LoadArmorVariables(this.Id);
             }
-            else if (this.ItType == ItemType.Weapon)
+            else if (this.itType == ItemType.Weapon)
             {
                 LoadWeaponVariables(this.Id);
             }
-            else if (this.ItType == ItemType.Others)
+            else if (this.itType == ItemType.Others)
             {
                 LoadOtherVariables(this.Id);
             }
 
+        }
+
+        public ItemType ItType
+        {
+            get { return itType; }
+            set { this.itType = value; }
         }
 
         public EffectType EfType
@@ -82,7 +89,6 @@ namespace Politechnikon.game_elements
             ParseSizeX(parser);
             ParseSizeY(parser);
             this.itemAttributeValue = Int32.Parse(parser.getElementByAttribute("id", "" + id, "attack"));
-
         }
 
         private void LoadOtherVariables(int id)
