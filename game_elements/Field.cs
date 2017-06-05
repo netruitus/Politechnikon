@@ -31,8 +31,8 @@ namespace Politechnikon.game_elements
                 }
                 else
                 {
-                    this.Path = "Graphics/Fields/nieodkryte.png";
-                    this.Description = "Pole nieodkryte";
+                    this.Path = "Graphics/Fields/zakryte.png";
+                    this.Description = "Pole zakryte";
                 }
             }
         }
@@ -58,8 +58,8 @@ namespace Politechnikon.game_elements
             }
             else
             {
-                this.Path = "Graphics/Fields/nieodkryte.png";
-                this.Description = "Pole nieodkryte";
+                this.Path = "Graphics/Fields/zakryte.png";
+                this.Description = "Pole zakryte";
             }
             
             ParseSizeX(parser);
