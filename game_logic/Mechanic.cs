@@ -13,6 +13,8 @@ using OpenTK.Input;
 using Microsoft.Win32;
 using System.Timers;
 using System.IO;
+using System.Security.AccessControl;
+using System.Security.Principal;
 
 
 
@@ -1705,11 +1707,14 @@ namespace Politechnikon.game_logic
                 XMLParser parser = new XMLParser("Items.xml");
                 for (int i = 0; i < GeneratedItems.Count; i++)
                 {
-                    if (GeneratedItems[i].ItType == ItemType.Others && GeneratedItems[i].EfType == EffectType.Healing)
+                    if (GeneratedItems[i] != null)
                     {
-                        var tmp = Int32.Parse(parser.getElementByAttribute("id", "" + GeneratedItems[i].Id, "effectStrength"));
-                        GeneratedItems[i].ItemAttributeValue = (int)(tmp * (1 + 0.05 * (avatar.Level - 1)));
-                    }
+                        if (GeneratedItems[i].ItType == ItemType.Others && GeneratedItems[i].EfType == EffectType.Healing)
+                        {
+                            var tmp = Int32.Parse(parser.getElementByAttribute("id", "" + GeneratedItems[i].Id, "effectStrength"));
+                            GeneratedItems[i].ItemAttributeValue = (int)(tmp * (1 + 0.05 * (avatar.Level - 1)));
+                        }
+                    } 
                 }
 
                 for (int i = 0; i < 10; i++)
@@ -1728,23 +1733,30 @@ namespace Politechnikon.game_logic
                 }
                 for (int i = 0; i < avatar.Backpack.Length; i++)
                 {
-                    if (avatar.Backpack[i].Id != 255)
+                    if (avatar.Backpack[i] != null)
                     {
-                        if (avatar.Backpack[i].ItType == ItemType.Others && avatar.Backpack[i].EfType == EffectType.Healing)
+                        if (avatar.Backpack[i].Id != 255)
                         {
-                            var tmp = Int32.Parse(parser.getElementByAttribute("id", "" + avatar.Backpack[i].Id, "effectStrength"));
-                            avatar.Backpack[i].ItemAttributeValue = (int)(tmp * (1 + 0.05 * (avatar.Level - 1)));
+                            if (avatar.Backpack[i].ItType == ItemType.Others && avatar.Backpack[i].EfType == EffectType.Healing)
+                            {
+                                var tmp = Int32.Parse(parser.getElementByAttribute("id", "" + avatar.Backpack[i].Id, "effectStrength"));
+                                avatar.Backpack[i].ItemAttributeValue = (int)(tmp * (1 + 0.05 * (avatar.Level - 1)));
+                            }
                         }
                     }
+
                 }
                 for (int i = 0; i < avatar.Potions.Length; i++)
                 {
-                    if (avatar.Potions[i].Id != 255)
+                    if (avatar.Potions[i] != null)
                     {
-                        if (avatar.Potions[i].ItType == ItemType.Others && avatar.Potions[i].EfType == EffectType.Healing)
+                        if (avatar.Potions[i].Id != 255)
                         {
-                            var tmp = Int32.Parse(parser.getElementByAttribute("id", "" + avatar.Potions[i].Id, "effectStrength"));
-                            avatar.Potions[i].ItemAttributeValue = (int)(tmp * (1 + 0.05 * (avatar.Level - 1)));
+                            if (avatar.Potions[i].ItType == ItemType.Others && avatar.Potions[i].EfType == EffectType.Healing)
+                            {
+                                var tmp = Int32.Parse(parser.getElementByAttribute("id", "" + avatar.Potions[i].Id, "effectStrength"));
+                                avatar.Potions[i].ItemAttributeValue = (int)(tmp * (1 + 0.05 * (avatar.Level - 1)));
+                            }
                         }
                     }
                 }
@@ -2089,13 +2101,17 @@ namespace Politechnikon.game_logic
 
         private void DisplayScores()
         {
-            ///ładowanie wyników
-            if (!(Directory.Exists(@"scores"))) Directory.CreateDirectory(@"scores");
+
+            var path = Path.Combine(Environment.GetFolderPath( Environment.SpecialFolder.ApplicationData), "Politechnikon");
+            if (!Directory.Exists(path))
+                Directory.CreateDirectory(path);
+
+            var filepath = Path.Combine(path, "gamescores.dat");
 
             List<Score> ScoreList = new List<Score>();
-            if (File.Exists(@"scores\\gamescores"))
+            if (File.Exists(filepath))
             {
-                string[] lines = File.ReadAllLines(@"scores\\gamescores");
+                string[] lines = File.ReadAllLines(filepath);
                 foreach (var item in lines)
                 {
                     Score sctmp = new Score();
@@ -2120,7 +2136,7 @@ namespace Politechnikon.game_logic
             }
 
 
-            StreamWriter filewriter = new StreamWriter(@"scores\\gamescores");
+            StreamWriter filewriter = new StreamWriter(filepath);
             foreach (var item in ScoreList)
             {
                 filewriter.WriteLine(item.Name + " " + item.Exp);
