@@ -1,0 +1,26 @@
+var class_politechnikon_1_1game__elements_1_1_avatar =
+[
+    [ "Avatar", "class_politechnikon_1_1game__elements_1_1_avatar.html#a1688fb20270b146b7235f5d65e8406ae", null ],
+    [ "LoadAvatarVariables", "class_politechnikon_1_1game__elements_1_1_avatar.html#a26773f93ac7d9aa5dd9aff3984ae1811", null ],
+    [ "attack", "class_politechnikon_1_1game__elements_1_1_avatar.html#a7172a863c53348642546f1dffb51f23e", null ],
+    [ "backpack", "class_politechnikon_1_1game__elements_1_1_avatar.html#a38b41ca7206819cc41f4085fc9f7d888", null ],
+    [ "currentHp", "class_politechnikon_1_1game__elements_1_1_avatar.html#a1894669f8115b1f65062d1453a1a0987", null ],
+    [ "defense", "class_politechnikon_1_1game__elements_1_1_avatar.html#a971b31b81ab6fea62ce6ea167351fd43", null ],
+    [ "equipment", "class_politechnikon_1_1game__elements_1_1_avatar.html#a07233619ecf1d758abb1915d810b8c6c", null ],
+    [ "experience", "class_politechnikon_1_1game__elements_1_1_avatar.html#ad8b85ac68cc3c23505dc6c248b001059", null ],
+    [ "hasAKey", "class_politechnikon_1_1game__elements_1_1_avatar.html#ac29fe75e5cfb59bbc9a322266bd6a0c6", null ],
+    [ "level", "class_politechnikon_1_1game__elements_1_1_avatar.html#a3671299c40c6b90f49eacb00815def31", null ],
+    [ "levelPeak", "class_politechnikon_1_1game__elements_1_1_avatar.html#aec5b9bc2dab8a93c5db556b4d557de2a", null ],
+    [ "maxHp", "class_politechnikon_1_1game__elements_1_1_avatar.html#a0f8f80e58a578372fbcd933b480f2ace", null ],
+    [ "potions", "class_politechnikon_1_1game__elements_1_1_avatar.html#a5ed276589a9d7f4f058e42bc6e08796d", null ],
+    [ "Attack", "class_politechnikon_1_1game__elements_1_1_avatar.html#ada238dc7b9e5ea90de3b63bbc50a14b0", null ],
+    [ "Backpack", "class_politechnikon_1_1game__elements_1_1_avatar.html#afe1451795f0a270382ca2515ad67b2fb", null ],
+    [ "CurrentHp", "class_politechnikon_1_1game__elements_1_1_avatar.html#ae49e317652b92b9a698b51258d73c9f0", null ],
+    [ "Defense", "class_politechnikon_1_1game__elements_1_1_avatar.html#ac3c76015d6895778d5230a03a1b1df83", null ],
+    [ "Equipment", "class_politechnikon_1_1game__elements_1_1_avatar.html#adad64e62c6625e74e90e1ad4c01f2a1d", null ],
+    [ "Experience", "class_politechnikon_1_1game__elements_1_1_avatar.html#afc1b5b7e12a9e15f1fef8bdf5235ce85", null ],
+    [ "HasAKey", "class_politechnikon_1_1game__elements_1_1_avatar.html#a33d2c14844a6682c1c1106a79f8305ff", null ],
+    [ "Level", "class_politechnikon_1_1game__elements_1_1_avatar.html#ab462c80143da13729c0e0940acd35cd6", null ],
+    [ "MaxHp", "class_politechnikon_1_1game__elements_1_1_avatar.html#a9102b58988452822e0f14bee7213fa0b", null ],
+    [ "Potions", "class_politechnikon_1_1game__elements_1_1_avatar.html#aee518fe1942487d91fbbec5ce6f70705", null ]
+];

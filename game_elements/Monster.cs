@@ -13,6 +13,7 @@ namespace Politechnikon.game_elements
         private int attack;
         private int currentHP;
         private int maxHP;
+        private int experience;
         private bool isBoss;
 
 
@@ -34,7 +35,7 @@ namespace Politechnikon.game_elements
             }
             else
             {
-                parser = new XMLParser("BossMonsters.xml");
+                parser = new XMLParser("Bosses.xml");
             }
             if (parser != null)
             {
@@ -47,6 +48,7 @@ namespace Politechnikon.game_elements
                 this.defense = Int32.Parse(parser.getElementByAttribute("id", "" + id, "defense"));
                 this.attack = Int32.Parse(parser.getElementByAttribute("id", "" + id, "attack"));
                 this.maxHP = Int32.Parse(parser.getElementByAttribute("id", "" + id, "life"));
+                this.experience = Int32.Parse(parser.getElementByAttribute("id", "" + id, "experience"));
                 this.currentHP = this.maxHP;
             }
 
@@ -80,6 +82,12 @@ namespace Politechnikon.game_elements
         {
             get { return maxHP; }
             set { this.maxHP = value; }
+        }
+
+        public int Experience
+        {
+            get { return experience; }
+            set { this.experience = value; }
         }
 
     }

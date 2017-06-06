@@ -57,7 +57,7 @@
 	</Item>
 	<Item id="255">
 		<name>null</name>
-		<path>Graphics/Items/null.png</path>
+		<path>Graphics/Fields/null.png</path>
 		<sizeX>50</sizeX>
 		<sizeY>50</sizeY>
 		<description>nic</description>

@@ -124,9 +124,9 @@ namespace Politechnikon.game_logic
             if (!ChanceRandom(10.0))
             {
                 MonsterHP -= Damage;
-                Console.WriteLine("Gracz zadaje obrażenie. Potwór traci " + Damage + " HP. Zostało " + MonsterHP + " życia."); //do zamiany na log
+                //Console.WriteLine("Gracz zadaje obrażenie. Potwór traci " + Damage + " HP. Zostało " + MonsterHP + " życia."); //do zamiany na log
             }
-            else Console.WriteLine("Gracz nie zadaje obrażeń w wyniku uniku potwora.");//do zamiany na log
+            else { } //Console.WriteLine("Gracz nie zadaje obrażeń w wyniku uniku potwora.");//do zamiany na log
 
             if (MonsterHP == 0) return;
 
@@ -139,9 +139,9 @@ namespace Politechnikon.game_logic
             if (!ChanceRandom(15.0))
             {
                 PlayerHP -= Damage;
-                Console.WriteLine("Potwór zadaje obrażenie. Gracz traci " + Damage + " HP. Zostało " + PlayerHP + " życia.");//do zamiany na log
+                //Console.WriteLine("Potwór zadaje obrażenie. Gracz traci " + Damage + " HP. Zostało " + PlayerHP + " życia.");//do zamiany na log
             }
-            else Console.WriteLine("Potwór nie zadaje obrażeń w wyniku uniku gracza.");//do zamiany na log
+            else { }//Console.WriteLine("Potwór nie zadaje obrażeń w wyniku uniku gracza.");//do zamiany na log
         }
 
         public static bool ChanceRandom(double Chance)
