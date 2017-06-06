@@ -1,0 +1,164 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Armors>
+	<Armor id="101">
+		<name>armors_dwuwieczne_glany_stopiej_zaglady</name>
+		<path>Graphics/Armors/armors_dwuwieczne_glany_stopiej_zaglady.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>1</defense>
+		<description>Dwuwieczne glany stopiej zagłady.</description>
+	</Armor>
+	<Armor id="201">
+		<name>armors_kamizelka_geodety</name>
+		<path>Graphics/Armors/armors_kamizelka_geodety.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>2</defense>
+		<description>Kamizelka geodety</description>
+	</Armor>
+	<Armor id="301">
+		<name>armors_klapki_oleksego</name>
+		<path>Graphics/Armors/armors_klapki_oleksego.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>3</defense>
+		<description>Klapki Oleksego</description>
+	</Armor>
+	<Armor id="401">
+		<name>armors_skarpetka_zgredka</name>
+		<path>Graphics/Armors/armors_skarpetka_zgredka.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>4</defense>
+		<description>Skarpetka Zgredka</description>
+	</Armor>
+	<Armor id="501">
+		<name>armors_zbroja_notatkowa</name>
+		<path>Graphics/Armors/armors_zbroja_notatkowa.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>5</defense>
+		<description>Zbroja notatkowa</description>
+	</Armor>
+		<Armor id="102">
+		<name>armors_dwuwieczne_glany_stopiej_zaglady</name>
+		<path>Graphics/Armors/armors_dwuwieczne_glany_stopiej_zaglady.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>6</defense>
+		<description>Dwuwieczne glany stopiej zagłady +1</description>
+	</Armor>
+	<Armor id="202">
+		<name>armors_kamizelka_geodety</name>
+		<path>Graphics/Armors/armors_kamizelka_geodety.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>7</defense>
+		<description>Kamizelka geodety +1</description>
+	</Armor>
+	<Armor id="302">
+		<name>armors_klapki_oleksego</name>
+		<path>Graphics/Armors/armors_klapki_oleksego.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>8</defense>
+		<description>Klapki Oleksego +1</description>
+	</Armor>
+	<Armor id="402">
+		<name>armors_skarpetka_zgredka</name>
+		<path>Graphics/Armors/armors_skarpetka_zgredka.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>9</defense>
+		<description>Skarpetka Zgredka +1</description>
+	</Armor>
+	<Armor id="502">
+		<name>armors_zbroja_notatkowa</name>
+		<path>Graphics/Armors/armors_zbroja_notatkowa.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>10</defense>
+		<description>Zbroja notatkowa +1</description>
+	</Armor>
+		<Armor id="103">
+		<name>armors_dwuwieczne_glany_stopiej_zaglady</name>
+		<path>Graphics/Armors/armors_dwuwieczne_glany_stopiej_zaglady.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>11</defense>
+		<description>Dwuwieczne glany stopiej zagłady +2</description>
+	</Armor>
+	<Armor id="203">
+		<name>armors_kamizelka_geodety</name>
+		<path>Graphics/Armors/armors_kamizelka_geodety.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>12</defense>
+		<description>Kamizelka geodety +2</description>
+	</Armor>
+	<Armor id="303">
+		<name>armors_klapki_oleksego</name>
+		<path>Graphics/Armors/armors_klapki_oleksego.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>13</defense>
+		<description>Klapki Oleksego +2</description>
+	</Armor>
+	<Armor id="403">
+		<name>armors_skarpetka_zgredka</name>
+		<path>Graphics/Armors/armors_skarpetka_zgredka.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>14</defense>
+		<description>Skarpetka Zgredka +2</description>
+	</Armor>
+	<Armor id="503">
+		<name>armors_zbroja_notatkowa</name>
+		<path>Graphics/Armors/armors_zbroja_notatkowa.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>15</defense>
+		<description>Zbroja notatkowa +2</description>
+	</Armor>
+		<Armor id="104">
+		<name>armors_dwuwieczne_glany_stopiej_zaglady</name>
+		<path>Graphics/Armors/armors_dwuwieczne_glany_stopiej_zaglady.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>16</defense>
+		<description>Dwuwieczne glany stopiej zagłady +3</description>
+	</Armor>
+	<Armor id="204">
+		<name>armors_kamizelka_geodety</name>
+		<path>Graphics/Armors/armors_kamizelka_geodety.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>17</defense>
+		<description>Kamizelka geodety +3</description>
+	</Armor>
+	<Armor id="304">
+		<name>armors_klapki_oleksego</name>
+		<path>Graphics/Armors/armors_klapki_oleksego.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>18</defense>
+		<description>Klapki Oleksego +3</description>
+	</Armor>
+	<Armor id="404">
+		<name>armors_skarpetka_zgredka</name>
+		<path>Graphics/Armors/armors_skarpetka_zgredka.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>19</defense>
+		<description>Skarpetka Zgredka +3</description>
+	</Armor>
+	<Armor id="504">
+		<name>armors_zbroja_notatkowa</name>
+		<path>Graphics/Armors/armors_zbroja_notatkowa.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<defense>20</defense>
+		<description>Zbroja notatkowa +3</description>
+	</Armor>
+</Armors>

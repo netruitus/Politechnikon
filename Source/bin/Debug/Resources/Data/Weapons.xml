@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Weapons>
+	<Weapon id="0101">
+		<name>weapons_kabel_dusiciel</name>
+		<path>Graphics/Weapons/weapons_kabel_dusiciel.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>1</attack>
+		<description>Kabel dusiciel.</description>
+	</Weapon>
+	<Weapon id="0201">
+		<name>weapons_niezmywalny_marker</name>
+		<path>Graphics/Weapons/weapons_niezmywalny_marker.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>2</attack>
+		<description>Niezmywalny marker.</description>
+	</Weapon>
+	<Weapon id="0301">
+		<name>weapons_olowek_antymatematyczny</name>
+		<path>Graphics/Weapons/weapons_olowek_antymatematyczny.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>3</attack>
+		<description>Ołówek antymatematyczny.</description>
+	</Weapon>
+	<Weapon id="0401">
+		<name>weapons_plomienny_zasilacz</name>
+		<path>Graphics/Weapons/weapons_plomienny_zasilacz.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>4</attack>
+		<description>Płomienny zasilacz.</description>
+	</Weapon>
+	<Weapon id="0501">
+		<name>weapons_zawirusowany_pendrive</name>
+		<path>Graphics/Weapons/weapons_zawirusowany_pendrive.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>5</attack>
+		<description>Zawirusowany pendrive.</description>
+	</Weapon>
+</Weapons>

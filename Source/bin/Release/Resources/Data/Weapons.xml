@@ -1,0 +1,172 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Weapons>
+	<Weapon id="101">
+		<name>weapons_kabel_dusiciel</name>
+		<path>Graphics/Weapons/weapons_kabel_dusiciel.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>1</attack>
+		<description>Kabel dusiciel</description>
+	</Weapon>
+	<Weapon id="102">
+		<name>weapons_kabel_dusiciel_+1</name>
+		<path>Graphics/Weapons/weapons_kabel_dusiciel.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>6</attack>
+		<description>Kabel dusiciel +1</description>
+	</Weapon>
+	<Weapon id="103">
+		<name>weapons_kabel_dusiciel_+2</name>
+		<path>Graphics/Weapons/weapons_kabel_dusiciel.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>11</attack>
+		<description>Kabel dusiciel +2</description>
+	</Weapon>
+	<Weapon id="104">
+		<name>weapons_kabel_dusiciel_+3</name>
+		<path>Graphics/Weapons/weapons_kabel_dusiciel.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>16</attack>
+		<description>Kabel dusiciel +3</description>
+	</Weapon>
+	<Weapon id="201">
+		<name>weapons_niezmywalny_marker</name>
+		<path>Graphics/Weapons/weapons_niezmywalny_marker.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>2</attack>
+		<description>Niezmywalny marker</description>
+	</Weapon>
+	<Weapon id="202">
+		<name>weapons_niezmywalny_marker_+1</name>
+		<path>Graphics/Weapons/weapons_niezmywalny_marker.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>7</attack>
+		<description>Niezmywalny marker +1</description>
+	</Weapon>
+	<Weapon id="203">
+		<name>weapons_niezmywalny_marker_+2</name>
+		<path>Graphics/Weapons/weapons_niezmywalny_marker.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>12</attack>
+		<description>Niezmywalny marker +2</description>
+	</Weapon>
+	<Weapon id="204">
+		<name>weapons_niezmywalny_marker_+3</name>
+		<path>Graphics/Weapons/weapons_niezmywalny_marker.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>17</attack>
+		<description>Niezmywalny marker +3</description>
+	</Weapon>
+	<Weapon id="301">
+		<name>weapons_olowek_antymatematyczny</name>
+		<path>Graphics/Weapons/weapons_olowek_antymatematyczny.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>3</attack>
+		<description>Ołówek antymatematyczny</description>
+	</Weapon>
+	<Weapon id="302">
+		<name>weapons_olowek_antymatematyczny_+1</name>
+		<path>Graphics/Weapons/weapons_olowek_antymatematyczny.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>8</attack>
+		<description>Ołówek antymatematyczny +1</description>
+	</Weapon>
+	<Weapon id="303">
+		<name>weapons_olowek_antymatematyczny_+2</name>
+		<path>Graphics/Weapons/weapons_olowek_antymatematyczny.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>13</attack>
+		<description>Ołówek antymatematyczny +2</description>
+	</Weapon>
+	<Weapon id="304">
+		<name>weapons_olowek_antymatematyczny_+3</name>
+		<path>Graphics/Weapons/weapons_olowek_antymatematyczny.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>18</attack>
+		<description>Ołówek antymatematyczny +3</description>
+	</Weapon>
+	<Weapon id="401">
+		<name>weapons_plomienny_zasilacz</name>
+		<path>Graphics/Weapons/weapons_plomienny_zasilacz.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>4</attack>
+		<description>Płomienny zasilacz</description>
+	</Weapon>
+	<Weapon id="402">
+		<name>weapons_plomienny_zasilacz_+1</name>
+		<path>Graphics/Weapons/weapons_plomienny_zasilacz.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>9</attack>
+		<description>Płomienny zasilacz +1</description>
+	</Weapon>
+	<Weapon id="403">
+		<name>weapons_plomienny_zasilacz_+2</name>
+		<path>Graphics/Weapons/weapons_plomienny_zasilacz.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>14</attack>
+		<description>Płomienny zasilacz +2</description>
+	</Weapon>
+	<Weapon id="404">
+		<name>weapons_plomienny_zasilacz_+3</name>
+		<path>Graphics/Weapons/weapons_plomienny_zasilacz.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>19</attack>
+		<description>Płomienny zasilacz +3</description>
+	</Weapon>
+	<Weapon id="501">
+		<name>weapons_zawirusowany_pendrive</name>
+		<path>Graphics/Weapons/weapons_zawirusowany_pendrive.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>5</attack>
+		<description>Zawirusowany pendrive</description>
+	</Weapon>
+	<Weapon id="502">
+		<name>weapons_zawirusowany_pendrive_+1</name>
+		<path>Graphics/Weapons/weapons_zawirusowany_pendrive.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>10</attack>
+		<description>Zawirusowany pendrive +1</description>
+	</Weapon>
+	<Weapon id="503">
+		<name>weapons_zawirusowany_pendrive_+2</name>
+		<path>Graphics/Weapons/weapons_zawirusowany_pendrive.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>15</attack>
+		<description>Zawirusowany pendrive +2</description>
+	</Weapon>
+	<Weapon id="504">
+		<name>weapons_zawirusowany_pendrive_+3</name>
+		<path>Graphics/Weapons/weapons_zawirusowany_pendrive.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<attack>20</attack>
+		<description>Zawirusowany pendrive +3</description>
+	</Weapon>
+</Weapons>
+	
+	
+	
+	
+	
+	
+	
+	

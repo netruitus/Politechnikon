@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Politechnikon: Plik źródłowy Application/engine/Sprite.cs</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript">
+  $(document).ready(initResizable);
+</script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Politechnikon
+   &#160;<span id="projectnumber">1.0</span>
+   </div>
+   <div id="projectbrief">Projekt zespołowy - PKiSI - semestr 6 - Krzysztof Winiarski - Magdalena Pietraszewska - Piotr Trautman - Paweł Dudzik</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano przez Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Szukaj');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Szukaj');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+$(document).ready(function(){initNavTree('_sprite_8cs_source.html','');});
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">Sprite.cs</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="_sprite_8cs.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>;</div><div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Collections.Generic;</div><div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Linq;</div><div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Text;</div><div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Threading.Tasks;</div><div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div><div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_open_t_k.html">OpenTK</a>;</div><div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_open_t_k.html">OpenTK</a>.Graphics.OpenGL;</div><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_system.html">System</a>.Drawing;</div><div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div><div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_politechnikon.html">Politechnikon</a>.engine</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div><div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_politechnikon_1_1engine_1_1_sprite.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_politechnikon_1_1engine_1_1_sprite.html">Sprite</a></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div><div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_politechnikon_1_1engine_1_1_sprite.html#adcb3804c296db5f74209836ea0d847fb">   15</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_politechnikon_1_1engine_1_1_sprite.html#adcb3804c296db5f74209836ea0d847fb">Draw</a>(<a class="code" href="struct_politechnikon_1_1engine_1_1_texture2_d.html">Texture2D</a> texture, Vector2 position, Vector2 scale, Color color, Vector2 origin,</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            RectangleF? sourceRec = null)</div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        {</div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;               Vector2[] vertices = <span class="keyword">new</span> Vector2[4]</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;               {</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;                   <span class="keyword">new</span> Vector2(0,0),</div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                   <span class="keyword">new</span> Vector2(1,0), </div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                   <span class="keyword">new</span> Vector2(1,1), </div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                   <span class="keyword">new</span> Vector2(0,1)</div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;               };</div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;               GL.BindTexture(TextureTarget.Texture2D, texture.<a class="code" href="struct_politechnikon_1_1engine_1_1_texture2_d.html#abb680b259489365ed9baa905e1e59445">ID</a>);</div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;               GL.Begin(PrimitiveType.Quads);</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;               GL.Color3(color);</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;               <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; 4; i++)</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;               {</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                   <span class="keywordflow">if</span> (sourceRec == null) GL.TexCoord2(vertices[i]);</div><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                   <span class="keywordflow">else</span> GL.TexCoord2((sourceRec.Value.Left + vertices[i].X * sourceRec.Value.Width) /texture.<a class="code" href="struct_politechnikon_1_1engine_1_1_texture2_d.html#a4419343a174a873823a2e670cfb64298">Width</a>, (sourceRec.Value.Top + vertices[i].Y * sourceRec.Value.Height)/texture.<a class="code" href="struct_politechnikon_1_1engine_1_1_texture2_d.html#ac817343a034b2a1d351169df4aa4b4fb">Height</a>);</div><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                   vertices[i].X *= (sourceRec == null) ? texture.<a class="code" href="struct_politechnikon_1_1engine_1_1_texture2_d.html#a4419343a174a873823a2e670cfb64298">Width</a> : sourceRec.Value.Width;</div><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                   vertices[i].Y *= (sourceRec == null) ? texture.<a class="code" href="struct_politechnikon_1_1engine_1_1_texture2_d.html#ac817343a034b2a1d351169df4aa4b4fb">Height</a> : sourceRec.Value.Height;</div><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                   vertices[i] -= origin;</div><div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                   vertices[i] *= scale;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                   vertices[i] += position;</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                   GL.Vertex2(vertices[i]);</div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;               }</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;               GL.End();</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div><div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="class_politechnikon_1_1engine_1_1_sprite.html#a2ce1bd5e3827682d1ee5c653ecd4af79">   49</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="class_politechnikon_1_1engine_1_1_sprite.html#a2ce1bd5e3827682d1ee5c653ecd4af79">Begin</a>(<span class="keywordtype">int</span> screenWidth, <span class="keywordtype">int</span> screenHeight)</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        {</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            GL.MatrixMode(MatrixMode.Projection);</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            GL.LoadIdentity();</div><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div><div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            GL.Ortho(-screenWidth/2f, screenWidth/2f, screenHeight/2f, -screenHeight/2f, 0f, 1f);</div><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div><div class="ttc" id="struct_politechnikon_1_1engine_1_1_texture2_d_html_abb680b259489365ed9baa905e1e59445"><div class="ttname"><a href="struct_politechnikon_1_1engine_1_1_texture2_d.html#abb680b259489365ed9baa905e1e59445">Politechnikon.engine.Texture2D.ID</a></div><div class="ttdeci">int ID</div><div class="ttdef"><b>Definition:</b> <a href="_texture2_d_8cs_source.html#l00015">Texture2D.cs:15</a></div></div>
+<div class="ttc" id="struct_politechnikon_1_1engine_1_1_texture2_d_html"><div class="ttname"><a href="struct_politechnikon_1_1engine_1_1_texture2_d.html">Politechnikon.engine.Texture2D</a></div><div class="ttdef"><b>Definition:</b> <a href="_texture2_d_8cs_source.html#l00009">Texture2D.cs:9</a></div></div>
+<div class="ttc" id="class_politechnikon_1_1engine_1_1_sprite_html_a2ce1bd5e3827682d1ee5c653ecd4af79"><div class="ttname"><a href="class_politechnikon_1_1engine_1_1_sprite.html#a2ce1bd5e3827682d1ee5c653ecd4af79">Politechnikon.engine.Sprite.Begin</a></div><div class="ttdeci">static void Begin(int screenWidth, int screenHeight)</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_8cs_source.html#l00049">Sprite.cs:49</a></div></div>
+<div class="ttc" id="class_politechnikon_1_1engine_1_1_sprite_html_adcb3804c296db5f74209836ea0d847fb"><div class="ttname"><a href="class_politechnikon_1_1engine_1_1_sprite.html#adcb3804c296db5f74209836ea0d847fb">Politechnikon.engine.Sprite.Draw</a></div><div class="ttdeci">static void Draw(Texture2D texture, Vector2 position, Vector2 scale, Color color, Vector2 origin, RectangleF? sourceRec=null)</div><div class="ttdef"><b>Definition:</b> <a href="_sprite_8cs_source.html#l00015">Sprite.cs:15</a></div></div>
+<div class="ttc" id="namespace_system_html"><div class="ttname"><a href="namespace_system.html">System</a></div></div>
+<div class="ttc" id="namespace_open_t_k_html"><div class="ttname"><a href="namespace_open_t_k.html">OpenTK</a></div></div>
+<div class="ttc" id="class_politechnikon_1_1engine_1_1_sprite_html"><div class="ttname"><a href="class_politechnikon_1_1engine_1_1_sprite.html">Politechnikon.engine.Sprite</a></div><div class="ttdef"><b>Definition:</b> <a href="_sprite_8cs_source.html#l00013">Sprite.cs:13</a></div></div>
+<div class="ttc" id="namespace_politechnikon_html"><div class="ttname"><a href="namespace_politechnikon.html">Politechnikon</a></div></div>
+<div class="ttc" id="struct_politechnikon_1_1engine_1_1_texture2_d_html_a4419343a174a873823a2e670cfb64298"><div class="ttname"><a href="struct_politechnikon_1_1engine_1_1_texture2_d.html#a4419343a174a873823a2e670cfb64298">Politechnikon.engine.Texture2D.Width</a></div><div class="ttdeci">int Width</div><div class="ttdef"><b>Definition:</b> <a href="_texture2_d_8cs_source.html#l00020">Texture2D.cs:20</a></div></div>
+<div class="ttc" id="struct_politechnikon_1_1engine_1_1_texture2_d_html_ac817343a034b2a1d351169df4aa4b4fb"><div class="ttname"><a href="struct_politechnikon_1_1engine_1_1_texture2_d.html#ac817343a034b2a1d351169df4aa4b4fb">Politechnikon.engine.Texture2D.Height</a></div><div class="ttdeci">int Height</div><div class="ttdef"><b>Definition:</b> <a href="_texture2_d_8cs_source.html#l00025">Texture2D.cs:25</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_eb1463819d84903762eb6f59cc0c4383.html">Application</a></li><li class="navelem"><a class="el" href="dir_d1414e5f67b4936a73e91da6aee82cea.html">engine</a></li><li class="navelem"><a class="el" href="_sprite_8cs.html">Sprite.cs</a></li>
+    <li class="footer">Wygenerowano przez
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.13 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<Fields>
+	<Field id="0">
+		<name>unexplored</name>
+		<path>Graphics/Fields/zakryte.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>Pole zakryte</description>
+	</Field>
+	<Field id="1">
+		<name>empty</name>
+		<path>Graphics/Fields/odkryte.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>Pole puste</description>
+	</Field>
+	<Field id="2">
+		<name>entry</name>
+		<path>Graphics/Fields/entrance.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>Pole wejścia</description>
+	</Field>
+	<Field id="3">
+		<name>exit</name>
+		<path>Graphics/Fields/exitshine.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>Pole wyjścia</description>
+	</Field>
+	<Field id="4">
+		<name>item_field</name>
+		<path>Graphics/Fields/odkryte.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>Pole z przedmiotem</description>
+	</Field>
+	<Field id="5">
+		<name>monster_field</name>
+		<path>Graphics/Fields/odkryte.png</path>
+		<sizeX>50</sizeX>
+		<sizeY>50</sizeY>
+		<description>Pole z potworem</description>
+	</Field>
+</Fields>

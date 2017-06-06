@@ -1,0 +1,33 @@
+Po uruchomieniu programu zostanie wyświetlone okno startowe zawierające cztery przyciski - Nowa gra, Wczytaj, Najlepsze wyniki oraz Zakończ.
+Wybranie przycisku "Nowa gra" skutkuje przejściem do okna nadania imienia dla awatara, którym użytkownik będzie grał.
+Wybranie przycisku "Wczytaj" skutkuje przejściem do okna wyboru zapisu gry, który może zostać wczytany, lub usunięty.
+Wybranie przycisku "Najlepsze wyniki" skutkuje przejściem do okna wyświetlającego zapisane najlepsze wyniki uzyskane po ukończeniu gry.
+Wybranie przycisku "Zakończ" skutkuje przejściem do okna potwierdzającego chęć wyjścia z programu.
+
+Okno nadania imienia dla awatara posiada przycisk Anuluj, który ponownie wyświetli ekran startowy, oraz przycisk Zatwierdź, który spowoduje przejście do widoku gry. 
+W oknie wyboru nazwy awatara jest także możliwe zakończenie programu lub wczytanie zapisanego stanu gry.
+
+Okno wczytywania będzie wyświetlać wszystkie zapisane stany gry. 
+Po wybraniu zapisu użytkownik będzie miał możliwość wczytania zapisu lub jego usunięcie. 
+Użytkownik może także anulować, aby wrócić do okna, z którego wywołał przycisk "Wczytaj"
+
+Okno z najlepszymi wynikami będzie wyświetlać najlepsze wyniki uzyskane po ukończeniu gry. 
+Wynik będzie się równał ilości punktów doświadczenia, jakie zdobyła postać podczas rozgrywki.
+
+Ekran wyjścia służy do potwierdzenia, czy użytkownik chce wyjść z programu. Użytkownik może wybrać jeden z dwóch przycisków - "Tak" lub "Nie". 
+Wciśnięcie pierwszego spowoduje wyjście z programu, natomiast wybranie drugiego przycisku spowoduje powrót do okna, z którego wywołał przycisk "Zakończ".
+
+Ekran gry, to znaczy interfejs, który będzie wyświetlany podczas aktywnej rozgrywki, będzie zawierał cztery przyciski menu: "Nowa gra", "Zapisz", "Wczytaj" oraz "Zakończ".
+Wybranie przycisku "Nowa gra" skutkuje przejściem do okna potwierdzającego, czy użytkownik chce zakończyć aktualną rozgrywkę i rozpocząć nową. Użytkownik może wybrać przycisk "Tak", który spowoduje wyświetlenie okna wyboru nazwy awatara, albo przycisk "Nie", który spowoduje powrót do gry.
+Wybranie przycisku "Zapisz" skutkuje przejściem do okna zapisu. (opisany niżej)
+Wybranie przycisku "Wczytaj" skutkuje przejściem do okna wczytywania. (opisany wyżej)
+Wybranie przycisku "Zakończ" skutkuje przejściem do okna wyjścia. (opisany wyżej)
+Okno gry będzie również zawierać elementy informacyjne - aktualne statystyki awatara, jego ekwipunek, plecak, a także pole wyświetlające komunikaty gry.
+
+W oknie zapisu zostaną wyświetlone wszystkie istniejące zapisy. Użytkownik może wprowadzić swoją nazwę dla nowego zapisu lub zaznaczyć już istniejący zapis, a wtedy jego nazwa zostanie wyświetlona w polu do wprowadzania nazwy zapisu. Poniżej tego pola będą dostępne trzy przyciski: "Zapisz", "Usuń" oraz "Anuluj". 
+Jeśli użytkownik wybierze przycisk "Zapisz", a wprowadzona przez niego nazwa pokrywa się z nazwą już istniejącego zapisu, zostanie pokazane okno informujące o istnieniu takiego zapisu i pytanie, czy go nadpisać. Użytkownik może wybrać "Tak", a wtedy nowy zapis zastąpi stary o tej samej nazwie, albo "Nie", a wtedy wróci do ekranu zapisu i będzie mógł zmienić nazwę.
+Jeśli użytkownik wybierze przycisk "Usuń", zaznaczony przez niego zapis zostanie usunięty.
+Jeśli użytkownik wybierze przycisk "Anuluj", wróci do ekranu gry.
+
+
+
